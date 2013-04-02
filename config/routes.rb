@@ -1,5 +1,5 @@
 NewHire3000Xp::Application.routes.draw do
-    get "new_hires/new"
+    resources :new_hires
 
     root to: 'static_pages#home'
 

@@ -1,3 +1,30 @@
-<% provide(:title, 'New Hire') %>
+<% provide(:title, 'Add New Hire!') %>
 <h1>Add New Hire</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@new_hire) do |f| %>
+		<%= render 'shared/error_messages' %>
+		
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :start_date %>
+      <%= f.text_field :start_date %>
+
+	  <%= f.label :office_location %>
+      <%= f.text_field :office_location %>
+
+	  <%= f.label :type_of_computer %>
+      <%= f.text_field :type_of_computer %>
+
+	  <%= f.label :department %>
+      <%= f.text_field :department %>
+
+      <%= f.submit "Add Hire", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
