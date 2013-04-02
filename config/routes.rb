@@ -1,10 +1,12 @@
 NewHire3000Xp::Application.routes.draw do
-  get "static_pages/home"
+    get "new_hires/new"
 
-  get "static_pages/help"
-  
-  get "static_pages/about"
+    root to: 'static_pages#home'
 
+    match '/new',  to: 'new_hires#new'
+
+    match '/help',    to: 'static_pages#help'
+    match '/about',   to: 'static_pages#about'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
