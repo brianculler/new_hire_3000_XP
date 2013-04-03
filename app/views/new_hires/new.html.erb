@@ -22,7 +22,7 @@
       <%= f.text_field :type_of_computer %>
 
 	  <%= f.label :department %>
-      <%= f.text_field :department %>
+      <%= f.select :department, ["QA", "Engineer", "Eng_Support"] %>
 
       <%= f.submit "Add Hire", class: "btn btn-large btn-primary" %>
     <% end %>
