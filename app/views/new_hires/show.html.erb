@@ -1,10 +1,17 @@
 <% provide(:title, @new_hire.name) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="span10">
     <section>
       <h1>
-        <%= @new_hire.name %>
+        <br>
+		<%= @new_hire.name %>
       </h1>
+	  <p>
+		<%= @new_hire.email %>
+		<br>
+		Department: <%= @new_hire.department %>
+		Office Location: <%= @new_hire.office_location %>
+	  </p>
     </section>
   </aside>
 </div>

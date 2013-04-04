@@ -24,7 +24,7 @@ class NewHire < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   
   validates :department, presence: true, length: { maximum: 50 }
-  validates :office_location, presence: true, length: { maximum: 100 }
+  validates :office_location, presence: true, length: { maximum: 200 }
   validates :start_date, presence: true, length: { maximum: 20 }
   validates :type_of_computer, presence: true, length: { maximum: 20 }
                     
