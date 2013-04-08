@@ -1,0 +1,6 @@
+<li>
+  <%= link_to new_hire.name, new_hire %>		|
+  <%= link_to "Edit", edit_new_hire_path(new_hire) %>	|
+  <%= link_to "delete", new_hire, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+</li>

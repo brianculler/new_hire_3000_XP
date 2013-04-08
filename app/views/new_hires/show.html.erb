@@ -1,10 +1,19 @@
 <% provide(:title, @new_hire.name) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="span10">
     <section>
       <h1>
-        <%= @new_hire.name %>
+        <br>
+		<%= @new_hire.name %> 
+		<%= link_to "Edit", edit_new_hire_path(@new_hire) %>
       </h1>
+	  <p>
+		<b>Email:</b> 			<%= @new_hire.email %>
+		<br>
+		<b>Department:</b>      <%= @new_hire.department %>
+		<br>
+		<b>Office Location:</b> <%= @new_hire.office_location %>
+	  </p>
     </section>
   </aside>
 </div>
