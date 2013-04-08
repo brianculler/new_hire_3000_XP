@@ -4,7 +4,8 @@
     <section>
       <h1>
         <br>
-		<%= @new_hire.name %>
+		<%= @new_hire.name %> 
+		<%= link_to "Edit", edit_new_hire_path(@new_hire) %>
       </h1>
 	  <p>
 		<b>Email:</b> 			<%= @new_hire.email %>
