@@ -26,6 +26,6 @@ class NewHire < ActiveRecord::Base
   validates :department, presence: true, length: { maximum: 50 }
   validates :office_location, presence: true, length: { maximum: 200 }
   validates :start_date, presence: true, length: { maximum: 30 }
-  validates :type_of_computer, presence: true, length: { maximum: 20 }
+  validates :type_of_computer, presence: true, length: { maximum: 30 }
                     
 end
