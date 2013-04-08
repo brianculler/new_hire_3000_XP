@@ -1,12 +1,15 @@
 <% provide(:title, @new_hire.name) %>
 <div class="row">
-  <aside class="span10">
+  <aside class="span12">
     <section>
-      <h1>
         <br>
-		<%= @new_hire.name %> 
-		<%= link_to "Edit", edit_new_hire_path(@new_hire) %>
-      </h1>
+		<font size="5"><b><%= @new_hire.name %></b></font> 
+	
+	<div style="float:right;">
+ 	<%= link_to "Edit", edit_new_hire_path(@new_hire), class: "btn btn-small" %>	
+	<%= link_to "delete", @new_hire, method: :delete,
+	                                  data: { confirm: "You sure?" }, class: "btn btn-small btn-danger" %>
+	</div>
 	  <p>
 		<b>Email:</b> 			<%= @new_hire.email %>
 		<br>
@@ -14,6 +17,7 @@
 		<br>
 		<b>Office Location:</b> <%= @new_hire.office_location %>
 	  </p>
+	
     </section>
   </aside>
 </div>
