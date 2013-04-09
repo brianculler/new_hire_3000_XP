@@ -5,6 +5,7 @@ gem 'bootstrap-sass', '2.1'   #css
 gem 'bcrypt-ruby', '3.0.1'    #handling password
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem 'jquery_datepicker'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'    #local database
