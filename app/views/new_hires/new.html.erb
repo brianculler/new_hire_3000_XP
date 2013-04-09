@@ -4,25 +4,44 @@
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@new_hire) do |f| %>
-		<%= render 'shared/error_messages' %>
+
+	  <%= render 'shared/error_messages' %>
 		
       <%= f.label :name %>
+      <div class="input-prepend">
+      <span class="add-on"><i class="icon-user"></i></span>
       <%= f.text_field :name %>
+      </div>
 
       <%= f.label :email %>
+      <div class="input-prepend">
+      <span class="add-on"><i class="icon-envelope"></i></span>
 	  <%= f.text_field :email %>
+	  </div>
 
       <%= f.label :start_date %>
+	  <div class="input-prepend">
+      <span class="add-on"><i class="icon-calendar"></i></span>
       <%= datepicker_input "new_hire","start_date", :placeholder => 'MM/DD/YYYY'%>
+      </div>
 
 	  <%= f.label :office_location %>
+	  <div class="input-prepend">
+      <span class="add-on"><i class="icon-map-marker"></i></span>
       <%= f.select :office_location, ["101 Marietta St. Suite 1700 Atlanta, GA 30303", "300 Oracle Pkwy. Redwood Shores, CA 94065", "13915 Burnet Rd., Suite 406, Austin, TX 78728", "475 Sansome St, 15th Floor, San Francisco, CA, 94111"]%>
+      </div>
 
 	  <%= f.label :type_of_computer %>
+	  <div class="input-prepend">
+      <span class="add-on"><i class="icon-wrench"></i></span>
       <%= f.select :type_of_computer, ["Non-Retina Macbook Pro", "Retina Macbook Pro"]%>
+      </div>
 
 	  <%= f.label :department %>
+	  <div class="input-prepend">
+      <span class="add-on"><i class="icon-home"></i></span>
       <%= f.select :department, ["Executive", "Outbound Product Management", "User Experience", "Program & Partner Management", "Inbound Product Management", "Engineering", "Engineering Infrastructure", "Quality Assurance", "Student / Interns"] %>
+	  </div>
 
       <%= f.submit "Add Hire", class: "btn btn-large btn-success" %>
     <% end %>

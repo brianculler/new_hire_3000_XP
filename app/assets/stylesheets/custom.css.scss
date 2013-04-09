@@ -16,8 +16,6 @@ $grayMediumLight: #eaeaea;
 
 /* universal */
 
-body {background-color:#F5F5F5;}
-
 .btn-custom {
   background-color: hsl(0, 0%, 71%) !important;
   background-repeat: repeat-x;
@@ -41,6 +39,7 @@ html {
 
 body {
   padding-top: 60px;
+  background-color:#F5F5F5;
 }
 
 section {
