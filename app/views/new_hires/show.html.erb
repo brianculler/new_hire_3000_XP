@@ -1,19 +1,33 @@
 <% provide(:title, @new_hire.name) %>
 <div class="row">
-  <aside class="span10">
+  <aside class="span12">
     <section>
-      <h1>
         <br>
-		<%= @new_hire.name %> 
-		<%= link_to "Edit", edit_new_hire_path(@new_hire) %>
-      </h1>
+		<font size="5"><b><%= @new_hire.name %></b></font> 
+	
+	<div style="float:right;">
+ 	<%= link_to "Edit", edit_new_hire_path(@new_hire), class: "btn btn-small" %>	
+	<%= link_to "delete", @new_hire, method: :delete,
+	                                  data: { confirm: "You sure?" }, class: "btn btn-small btn-danger" %>
+	</div>
 	  <p>
-		<b>Email:</b> 			<%= @new_hire.email %>
+		<i class="icon-envelope"></i><b>	Email:</b> 	     	
+		<%= @new_hire.email %>
 		<br>
-		<b>Department:</b>      <%= @new_hire.department %>
+		<i class="icon-calendar"></i><b>	Start date:</b>      
+		<%= @new_hire.start_date %>
 		<br>
-		<b>Office Location:</b> <%= @new_hire.office_location %>
+		<i class="icon-map-marker"></i><b>	Location:</b> 
+		<%= @new_hire.office_location %>
+		<br>
+		<i class="icon-wrench"></i><b>	Computer:</b> 
+		<%= @new_hire.type_of_computer %>
+		<br>
+		<i class="icon-home"></i><b>	Department:</b>      
+		<%= @new_hire.department %>
+		
 	  </p>
+	
     </section>
   </aside>
 </div>
