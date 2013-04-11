@@ -1,15 +1,16 @@
-<li>
-  <font size="4"><b><%= link_to new_hire.name, new_hire %></b></font>
-
-	<div style="float:right;">
- 	<%= link_to "Edit", edit_new_hire_path(new_hire), class: "btn btn-small" %>	
-	<%= link_to "delete", new_hire, method: :delete,
-	                                  data: { confirm: "You sure?" }, class: "btn btn-small btn-danger" %>
-	</div>
+<tr>
+	<td><font size="4"><b><%= link_to new_hire.name, new_hire %></b></font></td>
+	<td><%= new_hire.email %></td>
+	<td><%= new_hire.department %></td>					
+	<td>
 	
-	<br>								
-	<b>Email:</b> 			<%= new_hire.email %>
-	<br>
-	<b>Department:</b>      <%= new_hire.department %>
-	<br>				
-</li>
+	
+	
+	<%= link_to "Edit", edit_new_hire_path(new_hire), class: "btn btn-small" %>	
+		<%= link_to "delete", new_hire, method: :delete,
+		                                  data: { confirm: "You sure?" }, class: "btn btn-small btn-danger" %>
+		
+		
+		
+		</td>		
+</tr>

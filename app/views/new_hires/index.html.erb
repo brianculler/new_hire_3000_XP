@@ -3,8 +3,19 @@
 
 <%= will_paginate %>
 
-<ul class="users">
+<table class="table">
+	<thead>
+		<tr>
+			<th> Name </th>
+			<th> Email </th>
+			<th> Department </th>
+			<th> Quick Actions </th>
+		</tr>
+	<thead>
+
+	<tbody>
     <%= render @new_hires %>
-</ul>
+	</tbody>
+</table>
 
 <%= will_paginate %>

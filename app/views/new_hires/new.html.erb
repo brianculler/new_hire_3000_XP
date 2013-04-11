@@ -7,43 +7,29 @@
 
 	  <%= render 'shared/error_messages' %>
 		
-      <%= f.label :name %>
-      <div class="input-prepend">
-      <span class="add-on"><i class="icon-user"></i></span>
+    	<%= f.label :name %>
       <%= f.text_field :name %>
-      </div>
 
       <%= f.label :email %>
-      <div class="input-prepend">
-      <span class="add-on"><i class="icon-envelope"></i></span>
-	  <%= f.text_field :email %>
-	  </div>
+	  	<%= f.text_field :email %>
 
       <%= f.label :start_date %>
-	  <div class="input-prepend">
-      <span class="add-on"><i class="icon-calendar"></i></span>
       <%= datepicker_input "new_hire","start_date", :placeholder => 'MM/DD/YYYY'%>
-      </div>
 
-	  <%= f.label :office_location %>
-	  <div class="input-prepend">
-      <span class="add-on"><i class="icon-map-marker"></i></span>
-      <%= f.select :office_location, ["101 Marietta St. Suite 1700 Atlanta, GA 30303", "300 Oracle Pkwy. Redwood Shores, CA 94065", "13915 Burnet Rd., Suite 406, Austin, TX 78728", "475 Sansome St, 15th Floor, San Francisco, CA, 94111"]%>
-      </div>
+	  	<%= f.label :office_location %>
+      <%= f.select :office_location, ["101 Marietta St. Suite 1700 Atlanta, GA 30303", 
+																			"300 Oracle Pkwy. Redwood Shores, CA 94065", 
+																			"13915 Burnet Rd., Suite 406, Austin, TX 78728", 
+																			"475 Sansome St, 15th Floor, San Francisco, CA, 94111"]%>
 
-	  <%= f.label :type_of_computer %>
-	  <div class="input-prepend">
-      <span class="add-on"><i class="icon-wrench"></i></span>
+	  	<%= f.label :type_of_computer %>
       <%= f.select :type_of_computer, ["Non-Retina Macbook Pro", "Retina Macbook Pro"]%>
-      </div>
 
-	  <%= f.label :department %>
-	  <div class="input-prepend">
-      <span class="add-on"><i class="icon-home"></i></span>
-      <%= f.select :department, ["Executive", "Outbound Product Management", "User Experience", "Program & Partner Management", "Inbound Product Management", "Engineering", "Engineering Infrastructure", "Quality Assurance", "Student / Interns"] %>
-	  </div>
-
+	  	<%= f.label :department %>
+      <%= f.select :department, ["Engineering", "Engineering Infrastructure", "Executive", "Inbound Product Management", "Outbound Product Management", "Program & Partner Management", "Quality Assurance", "Student / Interns", "User Experience"] %>
+			
+			<br>
       <%= f.submit "Add Hire", class: "btn btn-large btn-success" %>
-    <% end %>
+    	<% end %>
   </div>
 </div>
