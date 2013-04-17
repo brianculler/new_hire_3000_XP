@@ -4,27 +4,32 @@
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@new_hire) do |f| %>
-		<%= render 'shared/error_messages' %>
+
+	  <%= render 'shared/error_messages' %>
 		
-      <%= f.label :name %>
+    	<%= f.label :name %>
       <%= f.text_field :name %>
 
       <%= f.label :email %>
-	  <%= f.text_field :email %>
+	  	<%= f.text_field :email %>
 
       <%= f.label :start_date %>
       <%= datepicker_input "new_hire","start_date", :placeholder => 'MM/DD/YYYY'%>
 
-	  <%= f.label :office_location %>
-      <%= f.select :office_location, ["101 Marietta St. Suite 1700 Atlanta, GA 30303", "300 Oracle Pkwy. Redwood Shores, CA 94065", "13915 Burnet Rd., Suite 406, Austin, TX 78728", "475 Sansome St, 15th Floor, San Francisco, CA, 94111"]%>
+	  	<%= f.label :office_location %>
+      <%= f.select :office_location, ["101 Marietta St. Suite 1700 Atlanta, GA 30303", 
+																			"300 Oracle Pkwy. Redwood Shores, CA 94065", 
+																			"13915 Burnet Rd., Suite 406, Austin, TX 78728", 
+																			"475 Sansome St, 15th Floor, San Francisco, CA, 94111"]%>
 
-	  <%= f.label :type_of_computer %>
+	  	<%= f.label :type_of_computer %>
       <%= f.select :type_of_computer, ["Non-Retina Macbook Pro", "Retina Macbook Pro"]%>
 
-	  <%= f.label :department %>
-      <%= f.select :department, ["Executive", "Outbound Product Management", "User Experience", "Program & Partner Management", "Inbound Product Management", "Engineering", "Engineering Infrastructure", "Quality Assurance", "Student / Interns"] %>
-
+	  	<%= f.label :department %>
+      <%= f.select :department, ["Engineering", "Engineering Infrastructure", "Executive", "Inbound Product Management", "Outbound Product Management", "Program & Partner Management", "Quality Assurance", "Student / Interns", "User Experience"] %>
+			
+			<br>
       <%= f.submit "Add Hire", class: "btn btn-large btn-success" %>
-    <% end %>
+    	<% end %>
   </div>
 </div>

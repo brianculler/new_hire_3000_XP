@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.1'   #css
 gem 'bcrypt-ruby', '3.0.1'    #handling password
-gem 'will_paginate', '3.0.3'
+gem 'will_paginate', '3.0.3'  #flip pages
 gem 'bootstrap-will_paginate', '0.0.6'
-gem 'jquery_datepicker'
+gem 'jquery_datepicker' #date picker
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'    #local database
@@ -27,7 +27,7 @@ group :development do
 end
 
 group :test do
-  gem 'factory_girl_rails', '4.1.0' #auto create new_hires
+#  gem 'factory_girl_rails', '4.1.0' #auto create new_hires
   gem 'capybara', '1.1.2'
 end
 
