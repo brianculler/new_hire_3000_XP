@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402174425) do
+ActiveRecord::Schema.define(:version => 20130418151619) do
 
   create_table "new_hires", :force => true do |t|
     t.string   "name"
@@ -20,8 +20,15 @@ ActiveRecord::Schema.define(:version => 20130402174425) do
     t.string   "office_location"
     t.string   "type_of_computer"
     t.string   "department"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.integer  "laptop",           :default => 0
+    t.integer  "badge",            :default => 0
+    t.integer  "vpn",              :default => 0
+    t.integer  "seat",             :default => 0
+    t.integer  "docs",             :default => 0
+    t.integer  "irc",              :default => 0
+    t.integer  "vm",               :default => 0
   end
 
   add_index "new_hires", ["email"], :name => "index_new_hires_on_email", :unique => true

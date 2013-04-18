@@ -6,7 +6,7 @@
         <br>
 		<font size="5"><b><%= @new_hire.name %></b></font>	
 	<div style="float:right;">
- 	<%= link_to "Edit", edit_new_hire_path(@new_hire), class: "btn btn-small" %>	
+ 	<%= link_to "edit", edit_new_hire_path(@new_hire), class: "btn btn-small" %>	
 	<%= link_to "delete", @new_hire, method: :delete,
 	                      data: { confirm: "You sure?" }, class: "btn btn-small btn-danger" %>
 	</div>
@@ -29,132 +29,7 @@
 	  </p>
     </section>
   </aside>
-	
-	<aside class="span12">
-	
-	<table class="table table-striped" border="1">
-		<thead>
-		    <tr class="success">
-		      <th class="span5">todo</th>
-					<th>person in charge</th>
-					<th>status</th>
-		      <th class="span3">available actions</th>			
-		    </tr>
-		</thead>
-		
-		<tr>
-	  	<td><font size="4">laptop</font>
-		<div style="float:right;">
-			<td>Jiayuan Chen</td>
-			<td><span class="label label-success">Done</span></td>
-			<td>
-				<div class="btn-group">
-					<a class="btn" href="#"><i class="icon-envelope"></i></a>
-					<a class="btn" href="#"><i class="icon-time"></i></a>
-					<a class="btn" href="#"><i class="icon-ok"></i></a>
-					<a class="btn" href="#" style="float:right;"><i class="icon-question-sign"></i></a>
-				</div>
-			</td>
-		</tr>
-		
-		<tr>
-			<td><font size="4">keycard badge (from Ron)</font></td>
-			<td>Jiayuan Chen</td>
-			<td><span class="label label-success">Done</span></td>
-			<td>
-				<div class="btn-group">
-					<a class="btn" href="#"><i class="icon-envelope"></i></a>
-					<a class="btn" href="#"><i class="icon-time"></i></a>
-					<a class="btn" href="#"><i class="icon-ok"></i></a>
-					<a class="btn" href="#" style="float:right;"><i class="icon-question-sign"></i></a>
-				</div>
-			</td>
-		</tr>
-		
-		<tr>
-			<td><font size="4">VPN account</font></td>
-			<td>Jiayuan Chen</td>
-			<td><span class="label label-warning">In progress</span></td>
-			<td>
-				<div class="btn-group">
-					<a class="btn" href="#"><i class="icon-envelope"></i></a>
-					<a class="btn" href="#"><i class="icon-time"></i></a>
-					<a class="btn" href="#"><i class="icon-ok"></i></a>
-					<a class="btn" href="#" style="float:right;"><i class="icon-question-sign"></i></a>
-				</div>
-			</td>
-		</tr>
-		
-		<tr>
-			<td><font size="4">assign a seat</font></td>
-			<td>Jiayuan Chen</td>
-			<td><span class="label label-important">Not started</span></td>
-			<td>
-				<div class="btn-group">
-					<a class="btn" href="#"><i class="icon-envelope"></i></a>
-					<a class="btn" href="#"><i class="icon-time"></i></a>
-					<a class="btn" href="#"><i class="icon-ok"></i></a>
-					<a class="btn" href="#" style="float:right;"><i class="icon-question-sign"></i></a>
-				</div>
-			</td>
-		</tr>
-		
-		<tr>
-			<td><font size="4">bring i9 documents</font></td>
-			<td>Jiayuan Chen</td>
-			<td><span class="label label-important">Not started</span></td>
-			<td>
-				<div class="btn-group">
-					<a class="btn" href="#"><i class="icon-envelope"></i></a>
-					<a class="btn" href="#"><i class="icon-time"></i></a>
-					<a class="btn" href="#"><i class="icon-ok"></i></a>
-					<a class="btn" href="#" style="float:right;"><i class="icon-question-sign"></i></a>
-				</div>
-			</td>
-		</tr>
-		
-		<tr>
-			<td><font size="4">IRC setup</font></td>
-			<td>Jiayuan Chen</td>
-			<td><span class="label label-important">Not started</span></td>
-			<td>
-				<div class="btn-group">
-					<a class="btn" href="#"><i class="icon-envelope"></i></a>
-					<a class="btn" href="#"><i class="icon-time"></i></a>
-					<a class="btn" href="#"><i class="icon-ok"></i></a>
-					<a class="btn" href="#" style="float:right;"><i class="icon-question-sign"></i></a>
-				</div>
-			</td>
-		</tr>
-		
-		<tr>
-			<td><font size="4">developer VM</font></td>
-			<td>Jiayuan Chen</td>
-			<td><span class="label label-important">Not started</span></td>
-			<td>
-				<div class="btn-group">
-					<a class="btn" href="#"><i class="icon-envelope"></i></a>
-					<a class="btn" href="#"><i class="icon-time"></i></a>
-					<a class="btn" href="#"><i class="icon-ok"></i></a>
-					<a class="btn" href="#" style="float:right;"><i class="icon-question-sign"></i></a>
-				</div>
-			</td>
-		</tr>
-	
-		<tr>
-			<td>...</td>
-			<td>...</td>
-			<td>...</td>
-			<td>...</td>
-		</tr>
-		<div style="float:right;">
-		<i class="icon-envelope"></i> contact person in charge &nbsp;&nbsp;
-		<i class="icon-time"></i> postpone &nbsp;&nbsp;
-		<i class="icon-ok"></i> Done!  &nbsp;&nbsp;
-		<i class="icon-question-sign"></i> how it works
-		</div>
-	</table>
-	
-	</aside>
+
+<%= render 'to_do_list' %>
 
 </div>

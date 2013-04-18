@@ -14,7 +14,8 @@
 #
 
 class NewHire < ActiveRecord::Base
-  attr_accessible :department, :email, :name, :office_location, :start_date, :type_of_computer
+  attr_accessible :department, :email, :name, :office_location, :start_date, :type_of_computer,
+                  :laptop, :badge, :vpn, :seat, :docs, :irc, :vm
 
   before_save { |user| user.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }

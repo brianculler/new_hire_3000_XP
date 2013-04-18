@@ -42,4 +42,5 @@ class NewHiresController < ApplicationController
         flash[:success] = "New hire deleted."
         redirect_to new_hires_url
       end
+      
 end
