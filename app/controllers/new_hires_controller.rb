@@ -24,6 +24,9 @@ class NewHiresController < ApplicationController
   
   def update
       @new_hire = NewHire.find(params[:id])
+      if params[:laptop]
+        @new_hire.update_attributes(:laptop => params[:laptop])
+      end
       if @new_hire.update_attributes(params[:new_hire])
         # Handle a successful update.
         flash[:success] = "Profile updated"
@@ -42,5 +45,5 @@ class NewHiresController < ApplicationController
         flash[:success] = "New hire deleted."
         redirect_to new_hires_url
       end
-      
+
 end

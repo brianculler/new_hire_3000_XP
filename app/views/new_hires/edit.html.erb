@@ -23,11 +23,13 @@
 
   	  <%= f.label :department %>
         <%= f.select :department, ["Executive", "Outbound Product Management", "User Experience", "Program & Partner Management", "Inbound Product Management", "Engineering", "Engineering Infrastructure", "Quality Assurance", "Student / Interns"] %>
+				<%=f.select :laptop, [0,1,2,3]%>
 	  <br>
 	  <br>
       <%= f.submit "Save", class: "btn btn-large btn-success" %>
       <%= link_to "Cancel", new_hire_url, class: "btn btn-large btn" %>	
     <% end %>
+
 
   </div>
 </div>

@@ -6,6 +6,8 @@ NewHire3000Xp::Application.routes.draw do
     match '/new',  to: 'new_hires#new'
     match '/help',  to: 'static_pages#help'
     match '/about', to: 'static_pages#about'
+    
+    match '/laptop/:id', to: 'new_hires#update'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
