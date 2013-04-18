@@ -5,12 +5,8 @@
 	<td>
 		<% if @new_hire.badge == 0 %>
 			<span class="label">Not started</span>
-		<% elsif @new_hire.badge == 3 %>
-			<span class="label label-info">did 1</span>
-		<% elsif @new_hire.badge == 2 %>
-			<span class="label label-warning">did 2</span>
-		<% elsif @new_hire.badge == 4 %>
-			<span class="label label-info">did 1</span><span class="label label-warning">did 2</span>
+		<% elsif @new_hire.badge == 2 || @new_hire.badge == 3 || @new_hire.badge == 4 %>
+			<span class="label label-warning">In progress</span>
 		<% else %>
 			<span class="label label-success">Done</span>
 		<% end %>
