@@ -2,26 +2,46 @@
 	<td><font size="4">laptop</font>
 	<td>Jiayuan Chen</td>
 	
-	
-	<td><span class="label label-success">Done</span></td>
-	
+	<td>
+		<% if @new_hire.laptop == 0 %>
+			<span class="label">Not started</span>
+		<% elsif @new_hire.laptop == 3 %>
+			<span class="label label-info">did 1</span>
+		<% elsif @new_hire.laptop == 2 %>
+			<span class="label label-warning">did 2</span>
+		<% elsif @new_hire.laptop == 4 %>
+			<span class="label label-info">did 1</span><span class="label label-warning">did 2</span>
+		<% else %>
+			<span class="label label-success">Done</span>
+		<% end %>
+	</td>
 	
 	<td>
 		<div class="btn-group">
 			<% if @new_hire.laptop == 0 %>
-		    <%= link_to "sent notification to PIC", "/laptop/#{@new_hire.id}?laptop=1", class: "btn" %>
-			<% elsif @new_hire.laptop == 1 %>
-				<%= link_to "email sent", "#", class: "btn disabled" %>
+		    <%= link_to "action 1", "/laptop/#{@new_hire.id}?laptop=3", class: "btn" %>
+			<% elsif @new_hire.laptop == 2 %>
+				<%= link_to "action 1", "/laptop/#{@new_hire.id}?laptop=4", class: "btn" %>
+			<% elsif @new_hire.laptop == 3 || @new_hire.laptop == 4 %>
+				<%= link_to "did action 1", "#", class: "btn disabled" %>
 		  <% end %>
+		
+			<% if @new_hire.laptop == 0 %>
+		    <%= link_to "action 2", "/laptop/#{@new_hire.id}?laptop=2", class: "btn" %>
+			<% elsif @new_hire.laptop == 3 %>
+				<%= link_to "action 2", "/laptop/#{@new_hire.id}?laptop=4", class: "btn" %>
+			<% elsif @new_hire.laptop == 2 || @new_hire.laptop == 4 %>
+					<%= link_to "did action 2", "#", class: "btn disabled" %>
+		  <% end %>
+		
+			<% if @new_hire.laptop != 1 %>
+		    <%= link_to "Done!", "/laptop/#{@new_hire.id}?laptop=1", class: "btn" %>
+		  <% else %>
+				<%= link_to "No more actions", "#", class: "btn disabled" %>
+			<% end %>
 			
-			<a class="btn" href="#">postpone</a>
-			<a class="btn" href="#">done!</a>
+			<%= link_to "reset", "/laptop/#{@new_hire.id}?laptop=0", class: "btn" %>
 		</div>
 	</td>
-	
-	
-	
-	
-	
 	
 </tr>

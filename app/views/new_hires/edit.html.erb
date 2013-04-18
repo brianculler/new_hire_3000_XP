@@ -23,7 +23,9 @@
 
   	  <%= f.label :department %>
         <%= f.select :department, ["Executive", "Outbound Product Management", "User Experience", "Program & Partner Management", "Inbound Product Management", "Engineering", "Engineering Infrastructure", "Quality Assurance", "Student / Interns"] %>
-				<%=f.select :laptop, [0,1,2,3]%>
+
+				<%= f.label :laptop %>
+				<%=f.select :laptop, [0,1,2,3,4,5,6,7]%>
 	  <br>
 	  <br>
       <%= f.submit "Save", class: "btn btn-large btn-success" %>

@@ -1,13 +1,47 @@
 <tr>
-	<td><font size="4">assign a seat</font></td>
+	<td><font size="4">seat</font>
 	<td>Jiayuan Chen</td>
-	<td><span class="label label-important">Not started</span></td>
+	
+	<td>
+		<% if @new_hire.seat == 0 %>
+			<span class="label">Not started</span>
+		<% elsif @new_hire.seat == 3 %>
+			<span class="label label-info">did 1</span>
+		<% elsif @new_hire.seat == 2 %>
+			<span class="label label-warning">did 2</span>
+		<% elsif @new_hire.seat == 4 %>
+			<span class="label label-info">did 1</span><span class="label label-warning">did 2</span>
+		<% else %>
+			<span class="label label-success">Done</span>
+		<% end %>
+	</td>
+	
 	<td>
 		<div class="btn-group">
-			<a class="btn" href="#"><i class="icon-envelope"></i></a>
-			<a class="btn" href="#"><i class="icon-time"></i></a>
-			<a class="btn" href="#"><i class="icon-ok"></i></a>
-			<a class="btn" href="#" style="float:right;"><i class="icon-question-sign"></i></a>
+			<% if @new_hire.seat == 0 %>
+		    <%= link_to "action 1", "/seat/#{@new_hire.id}?seat=3", class: "btn" %>
+			<% elsif @new_hire.seat == 2 %>
+				<%= link_to "action 1", "/seat/#{@new_hire.id}?seat=4", class: "btn" %>
+			<% elsif @new_hire.seat == 3 || @new_hire.seat == 4 %>
+				<%= link_to "did action 1", "#", class: "btn disabled" %>
+		  <% end %>
+		
+			<% if @new_hire.seat == 0 %>
+		    <%= link_to "action 2", "/seat/#{@new_hire.id}?seat=2", class: "btn" %>
+			<% elsif @new_hire.seat == 3 %>
+				<%= link_to "action 2", "/seat/#{@new_hire.id}?seat=4", class: "btn" %>
+			<% elsif @new_hire.seat == 2 || @new_hire.seat == 4 %>
+					<%= link_to "did action 2", "#", class: "btn disabled" %>
+		  <% end %>
+		
+			<% if @new_hire.seat != 1 %>
+		    <%= link_to "Done!", "/seat/#{@new_hire.id}?seat=1", class: "btn" %>
+		  <% else %>
+				<%= link_to "No more actions", "#", class: "btn disabled" %>
+			<% end %>
+			
+			<%= link_to "reset", "/seat/#{@new_hire.id}?seat=0", class: "btn" %>
 		</div>
 	</td>
+	
 </tr>

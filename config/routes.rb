@@ -7,7 +7,14 @@ NewHire3000Xp::Application.routes.draw do
     match '/help',  to: 'static_pages#help'
     match '/about', to: 'static_pages#about'
     
-    match '/laptop/:id', to: 'new_hires#update'
+    match '/laptop/:id', to: 'new_hires#update_laptop'
+    match '/badge/:id', to: 'new_hires#update_badge'
+    match '/vpn/:id', to: 'new_hires#update_vpn'
+    match '/seat/:id', to: 'new_hires#update_seat'
+    match '/docs/:id', to: 'new_hires#update_docs'
+    match '/irc/:id', to: 'new_hires#update_irc'
+    match '/vm/:id', to: 'new_hires#update_vm'
+    
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
