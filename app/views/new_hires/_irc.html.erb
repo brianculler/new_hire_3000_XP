@@ -31,7 +31,7 @@
 		  <% end %>
 		
 			<% if @new_hire.irc != 1 %>
-		    <%= link_to "Done!", "/irc/#{@new_hire.id}?irc=1", class: "btn" %>
+		    <%= link_to "Done!", "/irc/#{@new_hire.id}?irc=1", class: "btn btn-success" %>
 		  <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled" %>
 			<% end %>

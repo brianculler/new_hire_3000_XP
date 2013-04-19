@@ -31,7 +31,7 @@
 		  <% end %>
 		
 			<% if @new_hire.vpn != 1 %>
-		    <%= link_to "Done!", "/vpn/#{@new_hire.id}?vpn=1", class: "btn" %>
+		    <%= link_to "Done!", "/vpn/#{@new_hire.id}?vpn=1", class: "btn btn-success" %>
 		  <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled" %>
 			<% end %>

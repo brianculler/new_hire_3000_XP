@@ -31,7 +31,7 @@
 		  <% end %>
 		
 			<% if @new_hire.vm != 1 %>
-		    <%= link_to "Done!", "/vm/#{@new_hire.id}?vm=1", class: "btn" %>
+		    <%= link_to "Done!", "/vm/#{@new_hire.id}?vm=1", class: "btn btn-success" %>
 		  <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled" %>
 			<% end %>

@@ -31,7 +31,7 @@
 		  <% end %>
 		
 			<% if @new_hire.seat != 1 %>
-		    <%= link_to "Done!", "/seat/#{@new_hire.id}?seat=1", class: "btn" %>
+		    <%= link_to "Done!", "/seat/#{@new_hire.id}?seat=1", class: "btn btn-success" %>
 		  <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled" %>
 			<% end %>

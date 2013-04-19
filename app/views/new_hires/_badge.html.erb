@@ -31,7 +31,7 @@
 		  <% end %>
 		
 			<% if @new_hire.badge != 1 %>
-		    <%= link_to "Done!", "/badge/#{@new_hire.id}?badge=1", class: "btn" %>
+		    <%= link_to "Done!", "/badge/#{@new_hire.id}?badge=1", class: "btn btn-success" %>
 		  <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled" %>
 			<% end %>
