@@ -2,6 +2,7 @@ class NewHiresController < ApplicationController
   
   def show
       @new_hire = NewHire.find(params[:id])
+      @progress = 0
   end
   
   def new
