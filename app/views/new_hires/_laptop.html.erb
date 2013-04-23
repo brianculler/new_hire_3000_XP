@@ -16,13 +16,10 @@
 		<div class="btn-group">
 			<% if @new_hire.laptop == 0 %>
 		    	<%= link_to "action 1", "/laptop/#{@new_hire.id}?laptop=3", class: "btn btn-small" %>
-		    	<%= NewHireMailer.laptop_email(@new_hire).deliver %>
 			<% elsif @new_hire.laptop == 2 %>
 				<%= link_to "action 1", "/laptop/#{@new_hire.id}?laptop=4", class: "btn btn-small" %>
-				<%= NewHireMailer.laptop_email(@new_hire).deliver %>
 			<% elsif @new_hire.laptop == 3 || @new_hire.laptop == 4 %>
 				<%= link_to "did action 1", "#", class: "btn disabled btn-small" %>
-				<%= NewHireMailer.laptop_email(@new_hire).deliver %>
 		    <% end %>
 		
 			<% if @new_hire.laptop == 0 %>
