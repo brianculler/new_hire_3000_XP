@@ -12,6 +12,9 @@ class NewHiresController < ApplicationController
   def create
     @new_hire = NewHire.new(params[:new_hire])
     if @new_hire.save
+      NewHireMailer.welcome_email(@new_hire).deliver
+      NewHireMailer.keycard_email(@new_hire).deliver 
+      NewHireMailer.laptop_email(@new_hire).deliver
       flash[:success] = "Thanks for adding a new hire!"
       redirect_to @new_hire
     else
