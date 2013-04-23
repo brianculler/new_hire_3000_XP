@@ -1,0 +1,43 @@
+<tr>
+	<td><font size="4">Get a laptop</font>
+	<td>Jiayuan Chen</td>
+	
+	<td>
+		<% if @new_hire.laptop == 0 %>
+			<span class="label">Not started</span>
+		<% elsif @new_hire.laptop == 2 || @new_hire.laptop == 3 || @new_hire.laptop == 4 %>
+			<span class="label label-warning">In progress</span>
+		<% else %>
+			<span class="label label-success">Done</span>
+		<% end %>
+	</td>
+	
+	<td>
+		<div class="btn-group">
+			<% if @new_hire.laptop == 0 %>
+		    <%= link_to "action 1", "/laptop/#{@new_hire.id}?laptop=3", class: "btn btn-small" %>
+			<% elsif @new_hire.laptop == 2 %>
+				<%= link_to "action 1", "/laptop/#{@new_hire.id}?laptop=4", class: "btn btn-small" %>
+			<% elsif @new_hire.laptop == 3 || @new_hire.laptop == 4 %>
+				<%= link_to "did action 1", "#", class: "btn disabled btn-small" %>
+		  <% end %>
+		
+			<% if @new_hire.laptop == 0 %>
+		    <%= link_to "action 2", "/laptop/#{@new_hire.id}?laptop=2", class: "btn btn-small" %>
+			<% elsif @new_hire.laptop == 3 %>
+				<%= link_to "action 2", "/laptop/#{@new_hire.id}?laptop=4", class: "btn btn-small" %>
+			<% elsif @new_hire.laptop == 2 || @new_hire.laptop == 4 %>
+					<%= link_to "did action 2", "#", class: "btn disabled btn-small" %>
+		  <% end %>
+		
+			<% if @new_hire.laptop != 1 %>
+		    <%= link_to "Done!", "/laptop/#{@new_hire.id}?laptop=1", class: "btn btn-success btn-small" %>
+		  <% else %>
+				<%= link_to "No more actions", "#", class: "btn disabled btn-small" %>
+			<% end %>
+			
+			<%= link_to "reset", "/laptop/#{@new_hire.id}?laptop=0", class: "btn btn-small" %>
+		</div>
+	</td>
+	
+</tr>

@@ -1,16 +1,14 @@
 <tr>
-	<td><font size="4"><b><%= link_to new_hire.name, new_hire %></b></font></td>
+	<td><font size="4">
+
+	<b><%= link_to new_hire.name, new_hire %></b></font></td>
 	<td><%= new_hire.email %></td>
 	<td><%= new_hire.department %></td>					
 	<td>
-	
-	
 	
 	<%= link_to "Edit", edit_new_hire_path(new_hire), class: "btn btn-small" %>	
 		<%= link_to "delete", new_hire, method: :delete,
 		                                  data: { confirm: "You sure?" }, class: "btn btn-small btn-danger" %>
 		
-		
-		
-		</td>		
+	</td>		
 </tr>

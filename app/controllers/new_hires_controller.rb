@@ -2,6 +2,7 @@ class NewHiresController < ApplicationController
   
   def show
       @new_hire = NewHire.find(params[:id])
+      @progress = 0
   end
   
   def new
@@ -42,4 +43,62 @@ class NewHiresController < ApplicationController
         flash[:success] = "New hire deleted."
         redirect_to new_hires_url
       end
+      
+    ######## todo list ########
+    def update_laptop
+      @new_hire = NewHire.find(params[:id])
+      if params[:laptop]
+        @new_hire.update_attributes(:laptop => params[:laptop])
+      end
+      redirect_to @new_hire
+    end
+    
+    def update_badge
+      @new_hire = NewHire.find(params[:id])
+      if params[:badge]
+        @new_hire.update_attributes(:badge => params[:badge])
+      end
+      redirect_to @new_hire
+    end
+    
+    def update_vpn
+      @new_hire = NewHire.find(params[:id])
+      if params[:vpn]
+        @new_hire.update_attributes(:vpn => params[:vpn])
+      end
+      redirect_to @new_hire
+    end
+    
+    def update_seat
+      @new_hire = NewHire.find(params[:id])
+      if params[:seat]
+        @new_hire.update_attributes(:seat => params[:seat])
+      end
+      redirect_to @new_hire
+    end
+    
+    def update_docs
+      @new_hire = NewHire.find(params[:id])
+      if params[:docs]
+        @new_hire.update_attributes(:docs => params[:docs])
+      end
+      redirect_to @new_hire
+    end
+    
+    def update_irc
+      @new_hire = NewHire.find(params[:id])
+      if params[:irc]
+        @new_hire.update_attributes(:irc => params[:irc])
+      end
+      redirect_to @new_hire
+    end
+    
+    def update_vm
+      @new_hire = NewHire.find(params[:id])
+      if params[:vm]
+        @new_hire.update_attributes(:vm => params[:vm])
+      end
+      redirect_to @new_hire
+    end
+
 end

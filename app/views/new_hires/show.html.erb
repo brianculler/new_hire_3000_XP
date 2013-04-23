@@ -6,7 +6,7 @@
         <br>
 		<font size="5"><b><%= @new_hire.name %></b></font>	
 	<div style="float:right;">
- 	<%= link_to "Edit", edit_new_hire_path(@new_hire), class: "btn btn-small" %>	
+ 	<%= link_to "edit", edit_new_hire_path(@new_hire), class: "btn btn-small" %>	
 	<%= link_to "delete", @new_hire, method: :delete,
 	                      data: { confirm: "You sure?" }, class: "btn btn-small btn-danger" %>
 	</div>
@@ -29,55 +29,7 @@
 	  </p>
     </section>
   </aside>
-	
-	<aside class="span12">
-	
-	<table class="table table-striped" border="1">
-		<thead>
-		    <tr class="success">
-		      <th>todo</th>
-					<th>status</th>
-		      <th>available action</th>			
-		    </tr>
-		  </thead>
-	<tr>
-	<td><font size="4">get a laptop</font></td>
-	<td><span class="label label-success">Done</span></td>
-	<td class="span3">N/A</td>
-	</tr>
-	<tr>
-	<td><font size="4">set up vpn</font></td>
-	<td><span class="label label-success">Done</span></td>
-	<td class="span3">N/A</td>
-	</tr>
-	<tr>
-	<td><font size="4">finish HR forms</font></td>
-	<td><span class="label label-warning">In progress</span></td>
-	<td class="span3"><button class="btn  disabled" type="button">notification sent</button></td>
-	</tr>
-	<tr>
-	<td><font size="4">lunch location advices</font></td>
-	<td><span class="label label-important">Not started</span></td>
-	<td class="span3"><button class="btn" type="button">Find Brian Culler</button></td>
-	</tr>
-	<tr>
-	<td><font size="4">take oracle badge photo</font></td>
-	<td><span class="label label-important">Not started</span></td>
-	<td class="span3"><button class="btn" type="button">Find Brian Culler</button></td>
-	</tr>
-	<tr>
-	<td>...</td>
-	<td>...</td>
-	<td class="span3">...</td>
-	</tr>
-	</table>
-	
-	<b>New hire todo list accomplishment:</b>
-	<div class="progress progress-striped">
-	  <div class="bar" style="width: 45%;"></div>
-	&nbsp; 45%
-	</div>
-	
-	</aside>
+
+<%= render 'to_do_list' %>
 
 </div>
