@@ -5,7 +5,7 @@
 	<td>
 		<% if @new_hire.vm == 0 %>
 			<span class="label">Not started</span>
-		<% elsif @new_hire.vm == 2 || @new_hire.vm == 3 || @new_hire.vm == 4 %>
+		<% elsif @new_hire.vm == 2 || @new_hire.vm == 3 || @new_hire.vm == 4 || @new_hire.vm == 5 %>
 			<span class="label label-warning">In progress</span>
 		<% else %>
 			<span class="label label-success">Done</span>
@@ -15,29 +15,33 @@
 	<td>
 		<div class="btn-group">
 			<% if @new_hire.vm == 0 %>
-		    <%= link_to "action 1", "/vm/#{@new_hire.id}?vm=3", class: "btn btn-small" %>
+		    	<%= link_to "Send Email 1", "/vm/#{@new_hire.id}?vm=3", class: "btn btn-small" %>
 			<% elsif @new_hire.vm == 2 %>
-				<%= link_to "action 1", "/vm/#{@new_hire.id}?vm=4", class: "btn btn-small" %>
-			<% elsif @new_hire.vm == 3 || @new_hire.vm == 4 %>
-				<%= link_to "did action 1", "#", class: "btn disabled btn-small" %>
-		  <% end %>
+				<%= link_to "Send Email 1", "/vm/#{@new_hire.id}?vm=4", class: "btn btn-small" %>
+			<% elsif @new_hire.vm == 3 || @new_hire.vm == 4 || @new_hire.vm == 5 %>
+				<%= link_to "Email 1 sent", "#", class: "btn disabled btn-small" %>
+		    <% end %>
 		
 			<% if @new_hire.vm == 0 %>
-		    <%= link_to "action 2", "/vm/#{@new_hire.id}?vm=2", class: "btn btn-small" %>
+		   	    <%= link_to "Send Email 2", "/vm/#{@new_hire.id}?vm=2", class: "btn btn-small" %>
 			<% elsif @new_hire.vm == 3 %>
-				<%= link_to "action 2", "/vm/#{@new_hire.id}?vm=4", class: "btn btn-small" %>
-			<% elsif @new_hire.vm == 2 || @new_hire.vm == 4 %>
-					<%= link_to "did action 2", "#", class: "btn disabled btn-small" %>
-		  <% end %>
+				<%= link_to "Send Email 2", "/vm/#{@new_hire.id}?vm=5", class: "btn btn-small" %>
+			<% elsif @new_hire.vm == 2 || @new_hire.vm == 4 || @new_hire.vm == 5 %>
+				<%= link_to "Email 2 sent", "#", class: "btn disabled btn-small" %>
+		    <% end %>
 		
 			<% if @new_hire.vm != 1 %>
-		    <%= link_to "Done!", "/vm/#{@new_hire.id}?vm=1", class: "btn btn-success btn-small" %>
-		  <% else %>
+		    	<%= link_to "Done!", "/vm/#{@new_hire.id}?vm=1", class: "btn btn-success btn-small" %>
+		    <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled btn-small" %>
 			<% end %>
 			
 			<%= link_to "reset", "/vm/#{@new_hire.id}?vm=0", class: "btn btn-small" %>
+			
 		</div>
 	</td>
+	<td>
+		<%=@new_hire.vm%>
+		</td>
 	
 </tr>

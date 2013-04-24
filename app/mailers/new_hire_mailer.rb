@@ -16,4 +16,13 @@ class NewHireMailer < ActionMailer::Base
   	@new_hire = new_hire
   	mail(:to => new_hire.email, :subject => "New Keycard for #{new_hire.name}!")
   end
+  
+  def email_1(address)
+    mail(:to => address, :subject => "laptop email 1")
+  end
+  
+  def email_2(address)
+    mail(:to => address, :subject => "laptop email 2")
+  end
+  
 end
