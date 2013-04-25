@@ -1,5 +1,5 @@
 class NewHireMailer < ActionMailer::Base
-  default :from => "cbissell12345@gmail.com"
+  default :from => "New Hire 3000 XP"
  
   def welcome_email(new_hire)
     @new_hire = new_hire

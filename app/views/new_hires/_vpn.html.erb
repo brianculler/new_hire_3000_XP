@@ -15,13 +15,14 @@
 	<td>
 		<div class="btn-group">
 			<% if @new_hire.vpn == 0 %>
-		    	<%= link_to "Send Email 1", "/vpn/#{@new_hire.id}?vpn=3", class: "btn btn-small" %>
+		    	<%= link_to "Send Email", "/vpn/#{@new_hire.id}?vpn=3", class: "btn btn-small" %>
 			<% elsif @new_hire.vpn == 2 %>
-				<%= link_to "Send Email 1", "/vpn/#{@new_hire.id}?vpn=4", class: "btn btn-small" %>
+				<%= link_to "Send Email", "/vpn/#{@new_hire.id}?vpn=4", class: "btn btn-small" %>
 			<% elsif @new_hire.vpn == 3 || @new_hire.vpn == 4 || @new_hire.vpn == 5 %>
-				<%= link_to "Email 1 sent", "#", class: "btn disabled btn-small" %>
+				<%= link_to "Email Sent!", "#", class: "btn disabled btn-small" %>
 		    <% end %>
 		
+		 <!-- Disabled this part
 			<% if @new_hire.vpn == 0 %>
 		   	    <%= link_to "Send Email 2", "/vpn/#{@new_hire.id}?vpn=2", class: "btn btn-small" %>
 			<% elsif @new_hire.vpn == 3 %>
@@ -29,6 +30,7 @@
 			<% elsif @new_hire.vpn == 2 || @new_hire.vpn == 4 || @new_hire.vpn == 5 %>
 				<%= link_to "Email 2 sent", "#", class: "btn disabled btn-small" %>
 		    <% end %>
+		 -->
 		
 			<% if @new_hire.vpn != 1 %>
 		    	<%= link_to "Done!", "/vpn/#{@new_hire.id}?vpn=1", class: "btn btn-success btn-small" %>
@@ -40,8 +42,5 @@
 			
 		</div>
 	</td>
-	<td>
-		<%=@new_hire.vpn%>
-		</td>
 	
 </tr>
