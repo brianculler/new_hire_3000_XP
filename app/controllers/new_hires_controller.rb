@@ -51,10 +51,10 @@ class NewHiresController < ApplicationController
       end
       #======
       if @new_hire.laptop == 3 || @new_hire.laptop == 4
-        NewHireMailer.email_1("chenjiayuancz@gmail.com").deliver
-        flash[:success] = "Email 1 sent!"
+        NewHireMailer.laptop_email(@new_hire).deliver
+        flash[:success] = "Laptop email sent!"
       elsif @new_hire.laptop == 2 || @new_hire.laptop == 5
-        NewHireMailer.email_2("chenjiayuancz@gmail.com").deliver
+        NewHireMailer.email_2(@new_hire).deliver
         flash[:success] = "Email 2 sent!"
       elsif @new_hire.laptop == 1
         flash[:success] = "Work done!"
@@ -68,6 +68,15 @@ class NewHiresController < ApplicationController
       if params[:badge]
         @new_hire.update_attributes(:badge => params[:badge])
       end
+      #======
+      if @new_hire.badge == 3 || @new_hire.badge == 4
+        NewHireMailer.badge_email(@new_hire).deliver
+        flash[:success] = "Badge email sent!"
+      elsif @new_hire.badge == 2 || @new_hire.badge == 5
+        NewHireMailer.email_2(@new_hire).deliver
+        flash[:success] = "Email 2 sent!"
+      end
+      #======
       redirect_to @new_hire
     end
     
@@ -76,6 +85,15 @@ class NewHiresController < ApplicationController
       if params[:vpn]
         @new_hire.update_attributes(:vpn => params[:vpn])
       end
+      #======
+      if @new_hire.vpn == 3 || @new_hire.vpn == 4
+        NewHireMailer.VPN_email(@new_hire).deliver
+        flash[:success] = "VPN email sent!"
+      elsif @new_hire.vpn == 2 || @new_hire.vpn == 5
+        NewHireMailer.email_2(@new_hire).deliver
+        flash[:success] = "Email 2 sent!"
+      end
+      #======
       redirect_to @new_hire
     end
     
@@ -84,6 +102,15 @@ class NewHiresController < ApplicationController
       if params[:seat]
         @new_hire.update_attributes(:seat => params[:seat])
       end
+      #======
+      if @new_hire.seat == 3 || @new_hire.seat == 4
+        NewHireMailer.seat_email(@new_hire).deliver
+        flash[:success] = "Seat placement email sent!"
+      elsif @new_hire.seat == 2 || @new_hire.seat == 5
+        NewHireMailer.email_2(@new_hire).deliver
+        flash[:success] = "Email 2 sent!"
+      end
+      #======
       redirect_to @new_hire
     end
     
@@ -92,6 +119,15 @@ class NewHiresController < ApplicationController
       if params[:docs]
         @new_hire.update_attributes(:docs => params[:docs])
       end
+      #======
+      if @new_hire.docs == 3 || @new_hire.docs == 4
+        NewHireMailer.docs_email(@new_hire).deliver
+        flash[:success] = "Document email sent!"
+      elsif @new_hire.docs == 2 || @new_hire.docs == 5
+        NewHireMailer.email_2(@new_hire).deliver
+        flash[:success] = "Email 2 sent!"
+      end
+      #======
       redirect_to @new_hire
     end
     
@@ -100,6 +136,15 @@ class NewHiresController < ApplicationController
       if params[:irc]
         @new_hire.update_attributes(:irc => params[:irc])
       end
+      #======
+      if @new_hire.irc == 3 || @new_hire.irc == 4
+        NewHireMailer.IRC_email(@new_hire).deliver
+        flash[:success] = "IRC email sent!"
+      elsif @new_hire.irc == 2 || @new_hire.irc == 5
+        NewHireMailer.email_2(@new_hire).deliver
+        flash[:success] = "Email 2 sent!"
+      end
+      #======
       redirect_to @new_hire
     end
     
@@ -108,6 +153,15 @@ class NewHiresController < ApplicationController
       if params[:vm]
         @new_hire.update_attributes(:vm => params[:vm])
       end
+      #======
+      if @new_hire.vm == 3 || @new_hire.vm == 4
+        NewHireMailer.VM_email(@new_hire).deliver
+        flash[:success] = "VM email sent!"
+      elsif @new_hire.vm == 2 || @new_hire.vm == 5
+        NewHireMailer.email_2(@new_hire).deliver
+        flash[:success] = "Email 2 sent!"
+      end
+      #======
       redirect_to @new_hire
     end
 
