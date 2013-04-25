@@ -39,8 +39,8 @@ NewHire3000Xp::Application.configure do
   config.action_mailer.smtp_settings  = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :user_name            => 'cbissell12345@gmail.com',
-  :password             => 'Coolcool101',
+  :user_name            => 'chenjiayuancz@gmail.com',
+  :password             => 'chenzongjituan',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
 end

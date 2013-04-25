@@ -22,12 +22,12 @@
 
 class NewHire < ActiveRecord::Base
   attr_accessible :department, :email, :name, :office_location, :start_date, :type_of_computer,
-                  :laptop, :badge, :vpn, :seat, :docs, :irc, :vm
+                  :laptop, :badge, :vpn, :seat, :docs, :irc, :vm, :manager
 
   before_save { |user| user.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }
   
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[oracle]+\.[a-z]+\z/i
   validates :email, presence:   true,
                     format:     { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
@@ -36,5 +36,6 @@ class NewHire < ActiveRecord::Base
   validates :office_location, presence: true, length: { maximum: 200 }
   validates :start_date, presence: true, length: { maximum: 30 }
   validates :type_of_computer, presence: true, length: { maximum: 30 }
+  validates :manager, presence: true, length: { maximum: 30 }
                     
 end

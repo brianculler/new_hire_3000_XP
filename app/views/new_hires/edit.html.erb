@@ -9,11 +9,14 @@
         <%= f.label :name %>
         <%= f.text_field :name %>
 
-        <%= f.label :email %>
+        <%= f.label :oracle_email %>
         <%= f.text_field :email %>
 
         <%= f.label :start_date %>
         <%= datepicker_input "new_hire","start_date", :placeholder => 'MM/DD/YYYY'%>
+				
+				<%= f.label :manager %>
+	      <%= f.text_field :manager %>
 
   	  <%= f.label :office_location %>
         <%= f.select :office_location, ["101 Marietta St. Suite 1700 Atlanta, GA 30303", "300 Oracle Pkwy. Redwood Shores, CA 94065", "13915 Burnet Rd., Suite 406, Austin, TX 78728", "475 Sansome St, 15th Floor, San Francisco, CA, 94111"]%>

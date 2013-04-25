@@ -15,13 +15,14 @@
 	<td>
 		<div class="btn-group">
 			<% if @new_hire.seat == 0 %>
-		    	<%= link_to "Send Email 1", "/seat/#{@new_hire.id}?seat=3", class: "btn btn-small" %>
+		    	<%= link_to "Send Email", "/seat/#{@new_hire.id}?seat=3", class: "btn btn-small" %>
 			<% elsif @new_hire.seat == 2 %>
-				<%= link_to "Send Email 1", "/seat/#{@new_hire.id}?seat=4", class: "btn btn-small" %>
+				<%= link_to "Send Email", "/seat/#{@new_hire.id}?seat=4", class: "btn btn-small" %>
 			<% elsif @new_hire.seat == 3 || @new_hire.seat == 4 || @new_hire.seat == 5 %>
-				<%= link_to "Email 1 sent", "#", class: "btn disabled btn-small" %>
+				<%= link_to "Email Sent!", "#", class: "btn disabled btn-small" %>
 		    <% end %>
 		
+		 <!-- Disabled this part
 			<% if @new_hire.seat == 0 %>
 		   	    <%= link_to "Send Email 2", "/seat/#{@new_hire.id}?seat=2", class: "btn btn-small" %>
 			<% elsif @new_hire.seat == 3 %>
@@ -29,6 +30,7 @@
 			<% elsif @new_hire.seat == 2 || @new_hire.seat == 4 || @new_hire.seat == 5 %>
 				<%= link_to "Email 2 sent", "#", class: "btn disabled btn-small" %>
 		    <% end %>
+				-->
 		
 			<% if @new_hire.seat != 1 %>
 		    	<%= link_to "Done!", "/seat/#{@new_hire.id}?seat=1", class: "btn btn-success btn-small" %>
@@ -40,8 +42,5 @@
 			
 		</div>
 	</td>
-	<td>
-		<%=@new_hire.seat%>
-		</td>
-	
+
 </tr>
