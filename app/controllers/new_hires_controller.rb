@@ -2,7 +2,6 @@ class NewHiresController < ApplicationController
   
   def show
       @new_hire = NewHire.find(params[:id])
-      @progress = 0
   end
   
   def new
@@ -57,6 +56,8 @@ class NewHiresController < ApplicationController
       elsif @new_hire.laptop == 2 || @new_hire.laptop == 5
         NewHireMailer.email_2("chenjiayuancz@gmail.com").deliver
         flash[:success] = "Email 2 sent!"
+      elsif @new_hire.laptop == 1
+        flash[:success] = "Work done!"
       end
       #======
       redirect_to @new_hire
