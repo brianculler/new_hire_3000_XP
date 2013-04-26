@@ -7,39 +7,39 @@ class NewHireMailer < ActionMailer::Base
     #attachments['filename.jpg'] = File.read('/path/to/filename.jpg')
   end
 
-  def laptop_email(new_hire)
+  def laptop_email(contact, new_hire)
   	@new_hire = new_hire
-  	mail(:to => new_hire.email, :subject => "New Laptop for #{new_hire.name}")
+  	mail(:to => contact.email, :subject => "New Laptop for #{new_hire.name}")
   end
 
-  def badge_email(new_hire)
+  def badge_email(contact, new_hire)
   	@new_hire = new_hire
-  	mail(:to => new_hire.email, :subject => "Keycard Badge for #{new_hire.name}")
+  	mail(:to => contact.email, :subject => "Keycard Badge for #{new_hire.name}")
   end
   
-  def docs_email(new_hire)
+  def docs_email(contact, new_hire)
     @new_hire = new_hire
     mail(:to => new_hire.email, :subject => "Documents for #{new_hire.name}")
   end
 
-  def IRC_email(new_hire)
+  def IRC_email(contact, new_hire)
     @new_hire = new_hire
-    mail(:to => new_hire.email, :subject => "IRC for #{new_hire.name}")
+    mail(:to => contact.email, :subject => "IRC for #{new_hire.name}")
   end
 
-  def seat_email(new_hire)
+  def seat_email(contact, new_hire)
     @new_hire = new_hire
-    mail(:to => new_hire.email, :subject => "New seat for #{new_hire.name}")
+    mail(:to => contact.email, :subject => "New seat for #{new_hire.name}")
   end
 
-  def VM_email(new_hire)
+  def VM_email(contact, new_hire)
     @new_hire = new_hire
-    mail(:to => new_hire.email, :subject => "VM for #{new_hire.name}")
+    mail(:to => contact.email, :subject => "VM for #{new_hire.name}")
   end
 
-  def VPN_email(new_hire)
+  def VPN_email(tontact,new_hire)
     @new_hire = new_hire
-    mail(:to => new_hire.email, :subject => "VPN Access for #{new_hire.name}")
+    mail(:to => contact.email, :subject => "VPN Access for #{new_hire.name}")
   end
   
 end

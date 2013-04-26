@@ -1,0 +1,27 @@
+<% provide(:title, 'Edit Contact') %>
+
+<h1>Edit Contact Information</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@contact) do |f| %>
+
+	  <%= render 'shared/error_message_contact' %>
+	
+		<%= f.label :todo %> 
+	  <%= f.text_field :todo, :disabled => true%>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :oracle_email %>
+	  <%= f.text_field :email %>
+
+	  <br>
+	  <br>
+      <%= f.submit "Submit", class: "btn btn-large btn-success" %>
+			<%= link_to "Cancel", contacts_url, class: "btn btn-large btn" %>	
+      <% end %>
+
+  </div>
+</div>
