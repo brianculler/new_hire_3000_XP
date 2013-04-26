@@ -130,8 +130,7 @@ class NewHiresController < ApplicationController
         @new_hire.update_attributes(:docs => params[:docs])
       end
       if @new_hire.docs == 3 || @new_hire.docs == 4
-        @contact_docs = Contact.find_by_todo("docs")
-        NewHireMailer.docs_email(@contact_docs, @new_hire).deliver
+        NewHireMailer.docs_email(@new_hire).deliver
         flash[:success] = "Document email sent!"
       #elsif @new_hire.docs == 2 || @new_hire.docs == 5
         #NewHireMailer.email_2(@new_hire).deliver

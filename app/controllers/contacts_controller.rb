@@ -36,6 +36,6 @@ class ContactsController < ApplicationController
   def destroy
     Contact.find(params[:id]).destroy
     flash[:success] = "Contact deleted."
-    redirect_to root
+    redirect_to contacts_path
   end
 end
