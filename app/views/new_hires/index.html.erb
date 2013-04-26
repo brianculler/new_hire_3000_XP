@@ -1,5 +1,9 @@
 <% provide(:title, 'All Hires') %>
 
+<% if Contact.find_by_todo("Laptop") != nil && Contact.find_by_todo("Badge") != nil && Contact.find_by_todo("Setup VPN") != nil && Contact.find_by_todo("Find Seat") != nil && Contact.find_by_todo("Setup IRC") != nil && Contact.find_by_todo("Setup VM") != nil %>
+<% else %>
+	<% flash[:error] = "Please first complete the necessary contacts information within \"Settings\"  (completed #{Contact.count} out 6)" %> 
+<% end %>
 
 <h1>All Hires</h1>
 

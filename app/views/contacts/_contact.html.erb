@@ -1,9 +1,11 @@
 <tr>
-	<td><%= contact.todo %></td>
-	<td>
-	<%= contact.name %> --- <%= contact.email %>
+	<td><font size="4"><%= contact.todo %></font></td>
+	<td><%= contact.name %></td>
+	<td><%= contact.email %>
 	<div style="float:right;">
 	<%= link_to "edit", edit_contact_path(contact), class: "btn btn-small" %>
+	<%= link_to "delete", contact, method: :delete,
+	                                  data: { confirm: "You sure?" }, class: "btn btn-mini btn-danger" %>
 	</div>
 	</td>				
 </tr>

@@ -7,7 +7,7 @@
     <%= form_for(@contact) do |f| %>
 
 	  <%= render 'shared/error_message_contact' %>
-	
+
 		<%= f.label :todo %> 
 	  <%= f.text_field :todo, :disabled => true%>
 
@@ -17,9 +17,9 @@
       <%= f.label :oracle_email %>
 	  <%= f.text_field :email %>
 
-	  <br>
-	  <br>
-      <%= f.submit "Submit", class: "btn btn-large btn-success" %>
+	  <br>      
+		<br>	
+			<%= f.submit "Save", class: "btn btn-large btn-success" %>
 			<%= link_to "Cancel", contacts_url, class: "btn btn-large btn" %>	
       <% end %>
 
