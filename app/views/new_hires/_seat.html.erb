@@ -1,11 +1,11 @@
 <tr>
 	<td><font size="4">Find a seat</font>
-	<td>Jiayuan Chen</td>
+	<td><%= @contact_seat.name  %></td>
 	
 	<td>
 		<% if @new_hire.seat == 0 %>
 			<span class="label">Not started</span>
-		<% elsif @new_hire.seat == 2 || @new_hire.seat == 3 || @new_hire.seat == 4 %>
+		<% elsif @new_hire.seat == 2 || @new_hire.seat == 3 || @new_hire.seat == 4 || @new_hire.seat == 5 %>
 			<span class="label label-warning">In progress</span>
 		<% else %>
 			<span class="label label-success">Done</span>
@@ -15,29 +15,32 @@
 	<td>
 		<div class="btn-group">
 			<% if @new_hire.seat == 0 %>
-		    <%= link_to "action 1", "/seat/#{@new_hire.id}?seat=3", class: "btn btn-small" %>
+		    	<%= link_to "Send Email", "/seat/#{@new_hire.id}?seat=3", class: "btn btn-small" %>
 			<% elsif @new_hire.seat == 2 %>
-				<%= link_to "action 1", "/seat/#{@new_hire.id}?seat=4", class: "btn btn-small" %>
-			<% elsif @new_hire.seat == 3 || @new_hire.seat == 4 %>
-				<%= link_to "did action 1", "#", class: "btn disabled btn-small" %>
-		  <% end %>
+				<%= link_to "Send Email", "/seat/#{@new_hire.id}?seat=4", class: "btn btn-small" %>
+			<% elsif @new_hire.seat == 3 || @new_hire.seat == 4 || @new_hire.seat == 5 %>
+				<%= link_to "Email Sent!", "#", class: "btn disabled btn-small" %>
+		    <% end %>
 		
+		 <!-- Disabled this part
 			<% if @new_hire.seat == 0 %>
-		    <%= link_to "action 2", "/seat/#{@new_hire.id}?seat=2", class: "btn btn-small" %>
+		   	    <%= link_to "Send Email 2", "/seat/#{@new_hire.id}?seat=2", class: "btn btn-small" %>
 			<% elsif @new_hire.seat == 3 %>
-				<%= link_to "action 2", "/seat/#{@new_hire.id}?seat=4", class: "btn btn-small" %>
-			<% elsif @new_hire.seat == 2 || @new_hire.seat == 4 %>
-					<%= link_to "did action 2", "#", class: "btn disabled btn-small" %>
-		  <% end %>
+				<%= link_to "Send Email 2", "/seat/#{@new_hire.id}?seat=5", class: "btn btn-small" %>
+			<% elsif @new_hire.seat == 2 || @new_hire.seat == 4 || @new_hire.seat == 5 %>
+				<%= link_to "Email 2 sent", "#", class: "btn disabled btn-small" %>
+		    <% end %>
+				-->
 		
 			<% if @new_hire.seat != 1 %>
-		    <%= link_to "Done!", "/seat/#{@new_hire.id}?seat=1", class: "btn btn-success btn-small" %>
-		  <% else %>
+		    	<%= link_to "Done!", "/seat/#{@new_hire.id}?seat=1", class: "btn btn-success btn-small" %>
+		    <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled btn-small" %>
 			<% end %>
 			
 			<%= link_to "reset", "/seat/#{@new_hire.id}?seat=0", class: "btn btn-small" %>
+			
 		</div>
 	</td>
-	
+
 </tr>

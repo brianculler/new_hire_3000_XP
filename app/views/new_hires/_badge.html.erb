@@ -1,11 +1,11 @@
 <tr>
 	<td><font size="4">Request keycard badge</font>
-	<td>Ron</td>
+	<td><%= @contact_badge.name  %></td>
 	
 	<td>
 		<% if @new_hire.badge == 0 %>
 			<span class="label">Not started</span>
-		<% elsif @new_hire.badge == 2 || @new_hire.badge == 3 || @new_hire.badge == 4 %>
+		<% elsif @new_hire.badge == 2 || @new_hire.badge == 3 || @new_hire.badge == 4 || @new_hire.badge == 5 %>
 			<span class="label label-warning">In progress</span>
 		<% else %>
 			<span class="label label-success">Done</span>
@@ -14,29 +14,32 @@
 	
 	<td>
 		<div class="btn-group">
-			<% if @new_hire.badge == 0 %>
-		    	<%= link_to "action 1", "/badge/#{@new_hire.id}?badge=3", class: "btn btn-small" %>
+			<% if @new_hire.badge == 0 %>、
+			<% a = "chen"%>
+		    	<%= link_to "Send Email", "/badge/#{@new_hire.id}?badge=3", class: "btn btn-small" %>
 			<% elsif @new_hire.badge == 2 %>
-				<%= link_to "action 1", "/badge/#{@new_hire.id}?badge=4", class: "btn btn-small" %>
-			<% elsif @new_hire.badge == 3 || @new_hire.badge == 4 %>
-				<%= link_to "did action 1", "#", class: "btn disabled btn-small" %>
-		  	<% end %>
+				<%= link_to "Send Email", "/badge/#{@new_hire.id}?badge=4", class: "btn btn-small" %>
+			<% elsif @new_hire.badge == 3 || @new_hire.badge == 4 || @new_hire.badge == 5 %>
+				<%= link_to "Email Sent!", "#", class: "btn disabled btn-small" %>
+		    <% end %>
 		
+		  <!-- Disabled this part
 			<% if @new_hire.badge == 0 %>
-		    	<%= link_to "action 2", "/badge/#{@new_hire.id}?badge=2", class: "btn btn-small" %>
+		   	    <%= link_to "Send Email 2", "/badge/#{@new_hire.id}?badge=2", class: "btn btn-small" %>
 			<% elsif @new_hire.badge == 3 %>
-				<%= link_to "action 2", "/badge/#{@new_hire.id}?badge=4", class: "btn btn-small" %>
-			<% elsif @new_hire.badge == 2 || @new_hire.badge == 4 %>
-				<%= link_to "did action 2", "#", class: "btn disabled btn-small" %>
-		 	<% end %>
+				<%= link_to "Send Email 2", "/badge/#{@new_hire.id}?badge=5", class: "btn btn-small" %>
+			<% elsif @new_hire.badge == 2 || @new_hire.badge == 4 || @new_hire.badge == 5 %>
+				<%= link_to "Email 2 sent", "#", class: "btn disabled btn-small" %>
+		    <% end %>
+			Disabled -->
 		
 			<% if @new_hire.badge != 1 %>
 		    	<%= link_to "Done!", "/badge/#{@new_hire.id}?badge=1", class: "btn btn-success btn-small" %>
-		  	<% else %>
+		    <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled btn-small" %>
-			<% end %>
-			
-			<%= link_to "reset", "/badge/#{@new_hire.id}?badge=0", class: "btn btn-small" %>
+			<% end %>	
+					
+			<%= link_to "reset", "/badge/#{@new_hire.id}?badge=0", class: "btn btn-small btn-dange" %>		
 		</div>
 	</td>
 	

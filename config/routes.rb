@@ -1,5 +1,6 @@
 NewHire3000Xp::Application.routes.draw do
     resources :new_hires
+    resources :contacts
 
     root to: 'static_pages#home'
 
@@ -13,8 +14,7 @@ NewHire3000Xp::Application.routes.draw do
     match '/seat/:id', to: 'new_hires#update_seat'
     match '/docs/:id', to: 'new_hires#update_docs'
     match '/irc/:id', to: 'new_hires#update_irc'
-    match '/vm/:id', to: 'new_hires#update_vm'
-    
+    match '/vm/:id', to: 'new_hires#update_vm'    
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

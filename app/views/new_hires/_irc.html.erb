@@ -1,11 +1,11 @@
 <tr>
 	<td><font size="4">Request IRC setup</font>
-	<td>Jiayuan Chen</td>
+	<td><%= @contact_irc.name  %></td>
 	
 	<td>
 		<% if @new_hire.irc == 0 %>
 			<span class="label">Not started</span>
-		<% elsif @new_hire.irc == 2 || @new_hire.irc == 3 || @new_hire.irc == 4 %>
+		<% elsif @new_hire.irc == 2 || @new_hire.irc == 3 || @new_hire.irc == 4 || @new_hire.irc == 5 %>
 			<span class="label label-warning">In progress</span>
 		<% else %>
 			<span class="label label-success">Done</span>
@@ -15,29 +15,32 @@
 	<td>
 		<div class="btn-group">
 			<% if @new_hire.irc == 0 %>
-		    <%= link_to "action 1", "/irc/#{@new_hire.id}?irc=3", class: "btn btn-small" %>
+		    	<%= link_to "Send Email", "/irc/#{@new_hire.id}?irc=3", class: "btn btn-small" %>
 			<% elsif @new_hire.irc == 2 %>
-				<%= link_to "action 1", "/irc/#{@new_hire.id}?irc=4", class: "btn btn-small" %>
-			<% elsif @new_hire.irc == 3 || @new_hire.irc == 4 %>
-				<%= link_to "did action 1", "#", class: "btn disabled btn-small" %>
-		  <% end %>
-		
+				<%= link_to "Send Email", "/irc/#{@new_hire.id}?irc=4", class: "btn btn-small" %>
+			<% elsif @new_hire.irc == 3 || @new_hire.irc == 4 || @new_hire.irc == 5 %>
+				<%= link_to "Email Sent!", "#", class: "btn disabled btn-small" %>
+		    <% end %>
+		  
+		 <!-- Disabled this part
 			<% if @new_hire.irc == 0 %>
-		    <%= link_to "action 2", "/irc/#{@new_hire.id}?irc=2", class: "btn btn-small" %>
+		   	    <%= link_to "Send Email 2", "/irc/#{@new_hire.id}?irc=2", class: "btn btn-small" %>
 			<% elsif @new_hire.irc == 3 %>
-				<%= link_to "action 2", "/irc/#{@new_hire.id}?irc=4", class: "btn btn-small" %>
-			<% elsif @new_hire.irc == 2 || @new_hire.irc == 4 %>
-					<%= link_to "did action 2", "#", class: "btn disabled btn-small" %>
-		  <% end %>
+				<%= link_to "Send Email 2", "/irc/#{@new_hire.id}?irc=5", class: "btn btn-small" %>
+			<% elsif @new_hire.irc == 2 || @new_hire.irc == 4 || @new_hire.irc == 5 %>
+				<%= link_to "Email 2 sent", "#", class: "btn disabled btn-small" %>
+		    <% end %>
+		  -->
 		
 			<% if @new_hire.irc != 1 %>
-		    <%= link_to "Done!", "/irc/#{@new_hire.id}?irc=1", class: "btn btn-success btn-small" %>
-		  <% else %>
+		    	<%= link_to "Done!", "/irc/#{@new_hire.id}?irc=1", class: "btn btn-success btn-small" %>
+		    <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled btn-small" %>
 			<% end %>
 			
 			<%= link_to "reset", "/irc/#{@new_hire.id}?irc=0", class: "btn btn-small" %>
+			
 		</div>
 	</td>
-	
+
 </tr>

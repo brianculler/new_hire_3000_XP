@@ -1,9 +1,7 @@
 <% provide(:title, @new_hire.name) %>
-
 <div class="row">
   <aside class="span12">
     <section>
-        <br>
 		<font size="5"><b><%= @new_hire.name %></b></font>	
 	<div style="float:right;">
  	<%= link_to "edit", edit_new_hire_path(@new_hire), class: "btn btn-small" %>	
@@ -17,6 +15,9 @@
 			<br>
 			<i class="icon-calendar"></i><b>	Start date:</b>      
 			<%= @new_hire.start_date %>
+			<br>
+			<i class="icon-user"></i><b>	Manager:</b>      
+			<%= @new_hire.manager %>
 			<br>
 			<i class="icon-map-marker"></i><b>	Location:</b> 
 			<%= @new_hire.office_location %>

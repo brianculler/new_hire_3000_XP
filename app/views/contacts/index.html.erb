@@ -1,0 +1,24 @@
+<% provide(:title, 'All Contacts') %>
+
+<h1>Setting</h1>
+<div class="center"><h2>Edit Email Contacts</h2>
+<div style="float:left;"><%= link_to "Add contact", new_contact_path, class: "btn btn-small" %></div>
+<% if Contact.find_by_todo("Laptop") != nil && Contact.find_by_todo("Badge") != nil && Contact.find_by_todo("Setup VPN") != nil && Contact.find_by_todo("Find Seat") != nil && Contact.find_by_todo("Setup IRC") != nil && Contact.find_by_todo("Setup VM") != nil %>
+<% else %>
+	<% flash[:error] = "Please finish adding the necessary contacts within Settings!" %> 
+<% end %>
+<br>
+<br>
+<table class="table table-striped table-bordered">
+	<thead>
+		<tr>
+			<th> todo </th>
+			<th> person in charge </th>
+		</tr>
+	<thead>
+
+	<tbody>
+    <%= render @contacts %>
+	</tbody>
+</table>
+

@@ -1,0 +1,9 @@
+<tr>
+	<td><%= contact.todo %></td>
+	<td>
+	<%= contact.name %> --- <%= contact.email %>
+	<div style="float:right;">
+	<%= link_to "edit", edit_contact_path(contact), class: "btn btn-small" %>
+	</div>
+	</td>				
+</tr>
