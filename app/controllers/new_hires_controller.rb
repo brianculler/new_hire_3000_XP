@@ -2,13 +2,13 @@ class NewHiresController < ApplicationController
   
   def show
       @new_hire = NewHire.find(params[:id])
-      @contact_laptop = Contact.find_by_todo("laptop")
-      @contact_badge = Contact.find_by_todo("badge")
-      @contact_vpn = Contact.find_by_todo("vpn")
-      @contact_seat = Contact.find_by_todo("seat")
-      @contact_docs = Contact.find_by_todo("docs")
-      @contact_irc = Contact.find_by_todo("irc")
-      @contact_vm = Contact.find_by_todo("vm")
+      @contact_laptop = Contact.find_by_todo("Laptop")
+      @contact_badge = Contact.find_by_todo("Badge")
+      @contact_vpn = Contact.find_by_todo("Setup VPN")
+      @contact_seat = Contact.find_by_todo("Find Seat")
+      @contact_docs = NewHire.find(params[:id])
+      @contact_irc = Contact.find_by_todo("Setup IRC")
+      @contact_vm = Contact.find_by_todo("Setup VM")
   end
   
   def new
@@ -58,7 +58,7 @@ class NewHiresController < ApplicationController
         @new_hire.update_attributes(:laptop => params[:laptop])
       end
       if @new_hire.laptop == 3 || @new_hire.laptop == 4
-        @contact_laptop = Contact.find_by_todo("laptop")
+        @contact_laptop = Contact.find_by_todo("Laptop")
         NewHireMailer.laptop_email(@contact_laptop, @new_hire).deliver
         flash[:success] = "Laptop email sent!"
       #elsif @new_hire.laptop == 2 || @new_hire.laptop == 5
@@ -76,7 +76,7 @@ class NewHiresController < ApplicationController
         @new_hire.update_attributes(:badge => params[:badge])
       end
       if @new_hire.badge == 3 || @new_hire.badge == 4
-        @contact_badge = Contact.find_by_todo("badge")
+        @contact_badge = Contact.find_by_todo("Badge")
         NewHireMailer.badge_email(@contact_badge, @new_hire).deliver
         flash[:success] = "Badge email sent!"
       #elsif @new_hire.badge == 2 || @new_hire.badge == 5
@@ -94,7 +94,7 @@ class NewHiresController < ApplicationController
         @new_hire.update_attributes(:vpn => params[:vpn])
       end
       if @new_hire.vpn == 3 || @new_hire.vpn == 4
-        @contact_vpn = Contact.find_by_todo("vpn")
+        @contact_vpn = Contact.find_by_todo("Setup VPN")
         NewHireMailer.VPN_email(@contact_vpn, @new_hire).deliver
         flash[:success] = "VPN email sent!"
       #elsif @new_hire.vpn == 2 || @new_hire.vpn == 5
@@ -112,7 +112,7 @@ class NewHiresController < ApplicationController
         @new_hire.update_attributes(:seat => params[:seat])
       end
       if @new_hire.seat == 3 || @new_hire.seat == 4
-        @contact_seat = Contact.find_by_todo("seat")
+        @contact_seat = Contact.find_by_todo("Find Seat")
         NewHireMailer.seat_email(@contact_seat, @new_hire).deliver
         flash[:success] = "Seat placement email sent!"
       #elsif @new_hire.seat == 2 || @new_hire.seat == 5
@@ -148,7 +148,7 @@ class NewHiresController < ApplicationController
         @new_hire.update_attributes(:irc => params[:irc])
       end
       if @new_hire.irc == 3 || @new_hire.irc == 4
-        @contact_irc = Contact.find_by_todo("irc")
+        @contact_irc = Contact.find_by_todo("Setup IRC")
         NewHireMailer.IRC_email(@contact_irc, @new_hire).deliver
         flash[:success] = "IRC email sent!"
       #elsif @new_hire.irc == 2 || @new_hire.irc == 5
@@ -166,7 +166,7 @@ class NewHiresController < ApplicationController
         @new_hire.update_attributes(:vm => params[:vm])
       end
       if @new_hire.vm == 3 || @new_hire.vm == 4
-        @contact_vm = Contact.find_by_todo("vm")
+        @contact_vm = Contact.find_by_todo("Setup VM")
         NewHireMailer.VM_email(@contact_vm, @new_hire).deliver
         flash[:success] = "VM email sent!"
       #elsif @new_hire.vm == 2 || @new_hire.vm == 5
