@@ -16,13 +16,18 @@ class ContactsController < ApplicationController
 
   def update
     @contact = Contact.find(params[:id])
+    old_address = @contact.email
     if @contact.update_attributes(params[:contact])
-      # Handle a successful update.
       flash[:success] = "Contact updated"
+        if @contact.email != old_address
+          NewHireMailer.contact_email(@contact).deliver
+          flash[:success] = "Contact updated, a notification has been sent to the new contact."
+        end
       redirect_to contacts_path
     else
       render 'edit'
-    end  
+    end
+      
   end
 
   def edit

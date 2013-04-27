@@ -16,9 +16,8 @@
 
       <%= f.label :oracle_email %>
 	  <%= f.text_field :email %>
-
-	  <br>      
-		<br>	
+	
+		<p> * a notification email will be sent to new email address </p>
 			<%= f.submit "Save", class: "btn btn-large btn-success" %>
 			<%= link_to "Cancel", contacts_url, class: "btn btn-large btn" %>	
       <% end %>

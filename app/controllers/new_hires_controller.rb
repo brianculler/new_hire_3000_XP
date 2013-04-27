@@ -19,7 +19,7 @@ class NewHiresController < ApplicationController
     @new_hire = NewHire.new(params[:new_hire])
     if @new_hire.save
       flash[:success] = "Thanks for adding a new hire! A welcome email has been sent to new hire."
-      redirect_to @new_hire
+      redirect_to new_hires_path
       NewHireMailer.welcome_email(@new_hire).deliver
     else
       render 'new'
@@ -42,7 +42,7 @@ class NewHiresController < ApplicationController
     end
     
     def index
-      @new_hires = NewHire.paginate(page: params[:page])
+      @new_hires = NewHire.paginate(page: params[:page]) 
     end
     
     def destroy
