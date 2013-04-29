@@ -37,5 +37,12 @@ class NewHire < ActiveRecord::Base
   validates :start_date, presence: true, length: { maximum: 30 }
   validates :type_of_computer, presence: true, length: { maximum: 30 }
   validates :manager, presence: true, length: { maximum: 30 }
-                    
+  
+  def self.search(search)
+    if search
+      where 'name LIKE ? ', "%#{search}%"
+    else
+      scoped
+    end
+  end               
 end
