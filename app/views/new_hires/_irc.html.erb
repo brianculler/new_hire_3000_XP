@@ -31,14 +31,15 @@
 				<%= link_to "Email 2 sent", "#", class: "btn disabled btn-small" %>
 		    <% end %>
 		  -->
-		
+			
+			<%= link_to "reset", "/irc/#{@new_hire.id}?irc=0", class: "btn btn-small" %>
+			
+			
 			<% if @new_hire.irc != 1 %>
 		    	<%= link_to "Done!", "/irc/#{@new_hire.id}?irc=1", class: "btn btn-success btn-small" %>
 		    <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled btn-small" %>
 			<% end %>
-			
-			<%= link_to "reset", "/irc/#{@new_hire.id}?irc=0", class: "btn btn-small" %>
 			
 		</div>
 	</td>
