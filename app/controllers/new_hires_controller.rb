@@ -19,7 +19,7 @@ class NewHiresController < ApplicationController
     @new_hire = NewHire.new(params[:new_hire])
     if @new_hire.save
       flash[:success] = "Thanks for adding a new hire! A welcome email has been sent to new hire."
-      redirect_to @new_hire
+      redirect_to new_hires_path
       NewHireMailer.welcome_email(@new_hire).deliver
     else
       render 'new'
@@ -42,7 +42,7 @@ class NewHiresController < ApplicationController
     end
     
     def index
-      @new_hires = NewHire.paginate(page: params[:page])
+      @new_hires = NewHire.paginate(page: params[:page]) 
     end
     
     def destroy
@@ -130,8 +130,7 @@ class NewHiresController < ApplicationController
         @new_hire.update_attributes(:docs => params[:docs])
       end
       if @new_hire.docs == 3 || @new_hire.docs == 4
-        @contact_docs = Contact.find_by_todo("docs")
-        NewHireMailer.docs_email(@contact_docs, @new_hire).deliver
+        NewHireMailer.docs_email(@new_hire).deliver
         flash[:success] = "Document email sent!"
       #elsif @new_hire.docs == 2 || @new_hire.docs == 5
         #NewHireMailer.email_2(@new_hire).deliver

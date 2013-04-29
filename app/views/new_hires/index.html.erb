@@ -1,9 +1,13 @@
 <% provide(:title, 'All Hires') %>
 
+<% if Contact.find_by_todo("Laptop") != nil && Contact.find_by_todo("Badge") != nil && Contact.find_by_todo("Setup VPN") != nil && Contact.find_by_todo("Find Seat") != nil && Contact.find_by_todo("Setup IRC") != nil && Contact.find_by_todo("Setup VM") != nil %>
+<% else %>
+	<% flash[:error] = "Please first complete the necessary contacts information within \"Settings\"  (completed #{Contact.count} out 6)" %> 
+<% end %>
 
 <h1>All Hires</h1>
 
-<div class="center"><h2>click on names to check new hire details and to-do list</h2><div>
+<div class="center"><h2>click "to-do list" button to start</h2><div>
 	
 <%= will_paginate %>
 
@@ -13,7 +17,7 @@
 			<th> Name </th>
 			<th> Oracle Email </th>
 			<th> Department </th>
-			<th> Quick Actions </th>
+			<th> Actions </th>
 		</tr>
 	<thead>
 

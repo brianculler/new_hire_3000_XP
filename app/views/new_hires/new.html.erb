@@ -33,12 +33,12 @@
 	  			<%= f.label :department %>
       			<%= f.select :department, ["Engineering", "Engineering Infrastructure", "Executive", "Inbound Product Management", "Outbound Product Management", "Program & Partner Management", "Quality Assurance", "Student / Interns", "User Experience"] %>
 			
-				<br>
+					<p>* a welcome email will be sent to new hire</p>
       			<%= f.submit "Add Hire", class: "btn btn-large btn-success" %>
     		<% end %>
 			
   		</div>
 	</div>
 <% else %>
-	<% flash[:error] = "Please finish adding the necessary contacts within Settings!" %>
+	<% flash[:error] = "Please first complete the necessary contacts information within \"Settings\"  (completed #{Contact.count} out 6)" %> 
 <% end %>
