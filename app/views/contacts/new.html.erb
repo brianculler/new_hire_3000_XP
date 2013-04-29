@@ -14,7 +14,7 @@
 	  <%= render 'shared/error_message_contact' %>
 
 			<%= f.label :todo, "Contact's responsbility" %>
-      <%= f.select :todo, ["Laptop", "Badge", "Find Seat", "Setup VPN", "Setup IRC", "Setup VM"] %>
+      <%= f.select :todo, @list %>
 
     	<%= f.label :name %>
       <%= f.text_field :name %>
@@ -24,7 +24,10 @@
 
 			<p> * a notification email will be sent to new contact </p>
       <%= f.submit "Add Contact", class: "btn btn-large btn-success" %>
+
     	<% end %>
+
+<%= puts "#{@contacts}" %>
 
   </div>
 </div>
