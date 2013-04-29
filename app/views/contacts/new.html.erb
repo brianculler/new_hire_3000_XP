@@ -1,0 +1,30 @@
+<% provide(:title, 'Add Contact!') %>
+
+<% if Contact.find_by_todo("Laptop") != nil && Contact.find_by_todo("Badge") != nil && Contact.find_by_todo("Setup VPN") != nil && Contact.find_by_todo("Find Seat") != nil && Contact.find_by_todo("Setup IRC") != nil && Contact.find_by_todo("Setup VM") != nil %>
+<% else %>
+	<% flash[:error] = "Please first complete the necessary contacts information within \"Settings\"  (completed #{Contact.count} out 6)" %> 
+<% end %>
+
+<h1>Add A Contact</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@contact) do |f| %>
+
+	  <%= render 'shared/error_message_contact' %>
+
+			<%= f.label :todo, "Contact's responsbility" %>
+      <%= f.select :todo, ["Laptop", "Badge", "Find Seat", "Setup VPN", "Setup IRC", "Setup VM"] %>
+
+    	<%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :oracle_email %>
+	  	<%= f.text_field :email %>
+
+			<p> * a notification email will be sent to new contact </p>
+      <%= f.submit "Add Contact", class: "btn btn-large btn-success" %>
+    	<% end %>
+
+  </div>
+</div>

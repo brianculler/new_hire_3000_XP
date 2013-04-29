@@ -17,7 +17,7 @@ class NewHireMailer < ActionMailer::Base
   	mail(:to => contact.email, :subject => "Keycard Badge for #{new_hire.name}")
   end
   
-  def docs_email(contact, new_hire)
+  def docs_email(new_hire)
     @new_hire = new_hire
     mail(:to => new_hire.email, :subject => "Documents for #{new_hire.name}")
   end
@@ -37,9 +37,13 @@ class NewHireMailer < ActionMailer::Base
     mail(:to => contact.email, :subject => "VM for #{new_hire.name}")
   end
 
-  def VPN_email(tontact,new_hire)
+  def VPN_email(contact,new_hire)
     @new_hire = new_hire
     mail(:to => contact.email, :subject => "VPN Access for #{new_hire.name}")
   end
   
+  def contact_email(contact)
+    @contact = contact
+    mail(:to => contact.email, :subject => "You are a New Hire 3000 XP contact!")
+  end
 end

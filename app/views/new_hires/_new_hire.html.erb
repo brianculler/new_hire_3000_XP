@@ -1,14 +1,29 @@
 <tr>
-	<td><font size="4">
-
-	<b><%= link_to new_hire.name, new_hire %></b></font></td>
+	<td>
+		<font size=3><b><%= new_hire.name %></b></font>
+		
+		<%if (new_hire.laptop == 1 && new_hire.badge == 1 && new_hire.vpn == 1 && 
+      new_hire.seat == 1 && new_hire.docs == 1 && new_hire.irc == 1 && new_hire.vm == 1) %>
+			<span class="label label-success">Done</span>
+    <% elsif (new_hire.laptop == 0 && new_hire.badge == 0 && new_hire.vpn == 0 && 
+        new_hire.seat == 0 && new_hire.docs == 0 && new_hire.irc == 0 && new_hire.vm == 0) %>
+			<span class="label">Not started</span>
+    <% else %>
+			<span class="label label-warning">In progress</span>
+		<% end %>	
+		
+	</td>
 	<td><%= new_hire.email %></td>
 	<td><%= new_hire.department %></td>					
 	<td>
 	
-	<%= link_to "Edit", edit_new_hire_path(new_hire), class: "btn btn-small" %>	
+	<%= link_to "to-do list", new_hire, class: "btn btn-small btn-primary" %>
+	
+	<div style="float:right;" class="btn-group">
+	<%= link_to "edit", edit_new_hire_path(new_hire), class: "btn btn-small" %>	
 		<%= link_to "delete", new_hire, method: :delete,
 		                                  data: { confirm: "You sure?" }, class: "btn btn-small btn-danger" %>
+	</div>
 		
 	</td>		
 </tr>
