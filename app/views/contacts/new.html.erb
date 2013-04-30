@@ -14,9 +14,27 @@
 	  <%= render 'shared/error_message_contact' %>
 
 			<%= f.label :todo, "Contact's responsbility" %>
+			
+			
+			<% @list = ["Laptop", "Badge", "Find Seat", "Setup VPN", "Setup IRC", "Setup VM"] %>
+	    <% Contact.all.each do |i| %>
+	    <%  if i.todo == "Laptop" %>
+	        <% @list.delete("Laptop") %>
+	      <% elsif i.todo == "Badge" %>
+	        <% @list.delete("Badge") %>
+	      <% elsif i.todo == "Find Seat" %>
+	        <% @list.delete("Find Seat") %>
+	      <% elsif i.todo == "Setup VPN" %>
+	        <% @list.delete("Setup VPN") %>
+	      <% elsif i.todo == "Setup IRC" %>
+	        <% @list.delete("Setup IRC") %>
+	      <% elsif i.todo == "Setup VM" %>
+	        <% @list.delete("Setup VM") %>
+	      <% end %>
+	    <% end %>
+			
+			
       <%= f.select :todo, @list %>
-			<!%= f.select :todo, ["Laptop", "Badge", "Find Seat", "Setup VPN", "Setup IRC", "Setup VM"] %>
-
     	<%= f.label :name %>
       <%= f.text_field :name %>
 
