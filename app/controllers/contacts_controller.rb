@@ -1,25 +1,24 @@
 class ContactsController < ApplicationController
+  
   def new
     @contact = Contact.new
+    
     @list = ["Laptop", "Badge", "Find Seat", "Setup VPN", "Setup IRC", "Setup VM"]
-
-      Contact.all.each do |i|
-        puts @contact.name
-        if i.todo == "Laptop"
-          @list.delete("Laptop")
-        elsif i.todo == "Badge"
-          @list.delete("Badge")
-        elsif i.todo == "Find Seat"
-          @list.delete("Find Seat")
-        elsif i.todo == "Setup VPN"
-          @list.delete("Setup VPN")
-        elsif i.todo == "Setup IRC"
-          @list.delete("Setup IRC")
-        elsif i.todo == "Setup VM"
-          @list.delete("Setup VM")
-        end
+    Contact.all.each do |i|
+      if i.todo == "Laptop"
+        @list.delete("Laptop")
+      elsif i.todo == "Badge"
+        @list.delete("Badge")
+      elsif i.todo == "Find Seat"
+        @list.delete("Find Seat")
+      elsif i.todo == "Setup VPN"
+        @list.delete("Setup VPN")
+      elsif i.todo == "Setup IRC"
+        @list.delete("Setup IRC")
+      elsif i.todo == "Setup VM"
+        @list.delete("Setup VM")
       end
-
+    end
   end
 
 
