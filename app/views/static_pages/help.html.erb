@@ -17,16 +17,16 @@
 
 <!-------->
 <div id="content">
-    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs" align="center">
-        <li class="active"><a href="#initialSetup" data-toggle="tab">☞Initial Setup</a></li>
-        <li><a href="#addnew" data-toggle="tab">☞Adding a New Hire</a></li>
-        <li><a href="#todolist" data-toggle="tab">☞To-do List & Emailing</a></li>
-        <li><a href="#edit" data-toggle="tab">☞Editting</a></li>
-        <li><a href="#delete" data-toggle="tab">☞Deleting</a></li>
-        <li><a href="#search" data-toggle="tab">☞Searching</a></li>
+    <ul id="pills" class="nav nav-pills" data-pills="pills" align="center">
+        <li class="active"><a href="#initialSetup" data-toggle="pill">☞Initial Setup</a></li>
+        <li><a href="#addnew" data-toggle="pill">☞Adding a New Hire</a></li>
+        <li><a href="#todolist" data-toggle="pill">☞To-do List & Emailing</a></li>
+        <li><a href="#edit" data-toggle="pill">☞Editting</a></li>
+        <li><a href="#delete" data-toggle="pill">☞Deleting</a></li>
+        <li><a href="#search" data-toggle="pill">☞Searching</a></li>
     </ul>
-    <div id="my-tab-content" class="tab-content">
-        <div class="tab-pane active" id="initialSetup">
+    <div id="my-pill-content" class="pill-content">
+        <div class="pill-pane active" id="initialSetup">
             <p style="font-size:18px">
             -Go to the settings tab
             <br>
@@ -50,7 +50,7 @@
             </p>
            
         </div>
-        <div class="tab-pane" id="addnew">
+        <div class="pill-pane" id="addnew">
             <p style="font-size:18px">
             -Click on "Add a new hire" button or "Add New" tab
             <br>
@@ -70,7 +70,7 @@
             </p>
             
         </div>
-        <div class="tab-pane" id="todolist">
+        <div class="pill-pane" id="todolist">
             <p style="font-size:18px">
             -Click on "Check new hire list" button or "All Hires" tab
             <br>
@@ -98,7 +98,7 @@
             </p>
             
         </div>
-        <div class="tab-pane" id="edit">
+        <div class="pill-pane" id="edit">
             <p style="font-size:18px">
             -Click on "Check new hire list" button or "All Hires" tab
             <br>
@@ -118,7 +118,7 @@
             </p>
             
         </div>
-        <div class="tab-pane" id="delete">
+        <div class="pill-pane" id="delete">
             <p style="font-size:18px">
             -Click on "Check new hire list" button or "All Hires" tab
             <br>
@@ -134,7 +134,7 @@
             </p>
             
         </div>
-        <div class="tab-pane" id="search">
+        <div class="pill-pane" id="search">
             <p style="font-size:18px">
             -Click on "Check new hire list" button or "All Hires" tab
             <br>
@@ -160,7 +160,7 @@
 
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
-        $('#tabs').tab();
+        $('#pills').pill();
     });
 </script>    
 </div> <!-- container -->
