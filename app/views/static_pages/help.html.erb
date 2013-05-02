@@ -1,166 +1,176 @@
 <% provide(:title, 'Help') %>
 <h1>Help</h1>
-<a name="top"><p style = "align:left;font-size:32px;text-decoration:underline;"><strong>Table of Contents</p><a>
-<a href="#initial">→Initial setup</a>
 <br>
-<a href="#addnew">→Adding New Hires</a>
-<br>
-<a href="#todolist">→To Do List and Emailing Contacts</a>
-<br>
-<a href="#edit">→Editting a New Hire</a>
-<br>
-<a href="#delete">→Deleting a New Hire</a>
-<br>
-<a href="#search">→Searching for a New Hire</a>
+<a href="#top" style="font-size:24px"><strong>What do you need help with?</a>
 <br>
 <br>
-<br>
+<html lang="en">
+<head>
+<!-- Le styles -->
+<link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+</head>
 
-<a style="font-size:32px" name="initial"><strong>Initial setup:</a>
-<br>
-<p style="font-size:18px">
-	  -Go to the settings tab
-	  <br>
-	  <%= link_to image_tag("00000026.jpg") %> 
-    <br>
-    -Click on the "add contact" button
-  	<br>
-  	<%= link_to image_tag("00000027.jpg") %>
-    <br>
-  	-Choose the responsibility that corresponds to the contact that you are adding.  The contact will recieve emails regarding the responsibility.
-  	<br>
-    <%= link_to image_tag("00000028.jpg") %>
-    <br>
-    -Put in the name and email address of the contact 
-    <br>
-  	<%= link_to image_tag("00000030.jpg") %>
-  	<br>
-  	-All of the resonsibilities will need to have an assigned contact before new hires can start being added
-  	<br>
-  	<%= link_to image_tag("00000031.jpg") %>
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
+<body>
 
-<a style="font-size:32px" name="addnew"><strong>Adding New Hires:</a>
-<br>
-<p style="font-size:18px">
-	  -Click on "Add a new hire" button or "Add New" tab
-	  <br>
-  	<%= link_to image_tag("00000032.jpg") %>
-    <br>
-	  -Fill in all required fields 
-	  <br>
-  	<%= link_to image_tag("00000033.jpg") %>
-    <br>
-	  -Click "Add Hire" to complete adding hire
-	  <br>
-  	<%= link_to image_tag("00000034.jpg") %>
-    <br>
-    -The new hire is now added to the "All Hires" index
-    <br>
-    <%= link_to image_tag("00000035.jpg") %>
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
+<div class="container">
 
-<a style="font-size:32px" name="todolist"><strong>To Do List and Emailing Contacts:</a>
-<br>
-<p style="font-size:18px">
-	  -Click on "Check new hire list" button or "All Hires" tab
-	  <br>
-  	<%= link_to image_tag("00000036.jpg") %>
-  	<br>
-	  -Click on the "to-do list" button on the row of the table that corresponds to the new hire of choice
-	  <br>
-  	<%= link_to image_tag("00000037.jpg") %>
-  	<br>
-	  -To send an email, click on the "Send Email" button on the row of the table that corresponds to the task that needs to be completed
-	  <br>
-  	<%= link_to image_tag("00000038.jpg") %>
-  	<br>
-	  -After the task is complete, click the "Done" button 
-	  <br>
-  	<%= link_to image_tag("00000039.jpg") %>
-    <br>
-	  -If you wish to send another email that corresponds to an already completed task, click the "reset" button 
-	  <br>
-  	<%= link_to image_tag("00000040.jpg") %>
-  	<br>
-	  -When all tasks are complete, the "to-do list progress" will read "You have finished the new hire todo list!"
-	  <br>
-  	<%= link_to image_tag("00000041.jpg") %>
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
+<!-------->
+<div id="content">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs" align="center">
+        <li class="active"><a href="#initialSetup" data-toggle="tab">☞Initial Setup</a></li>
+        <li><a href="#addnew" data-toggle="tab">☞Adding a New Hire</a></li>
+        <li><a href="#todolist" data-toggle="tab">☞To-do List & Emailing</a></li>
+        <li><a href="#edit" data-toggle="tab">☞Editting</a></li>
+        <li><a href="#delete" data-toggle="tab">☞Deleting</a></li>
+        <li><a href="#search" data-toggle="tab">☞Searching</a></li>
+    </ul>
+    <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane active" id="initialSetup">
+            <p style="font-size:18px">
+            -Go to the settings tab
+            <br>
+            <%= link_to image_tag("00000026.jpg") %> 
+            <br>
+            -Click on the "add contact" button
+            <br>
+            <%= link_to image_tag("00000027.jpg") %>
+            <br>
+            -Choose the responsibility that corresponds to the contact that you are adding.  The contact will recieve emails regarding the responsibility.
+            <br>
+            <%= link_to image_tag("00000028.jpg") %>
+            <br>
+            -Put in the name and email address of the contact 
+            <br>
+            <%= link_to image_tag("00000030.jpg") %>
+            <br>
+            -All of the resonsibilities will need to have an assigned contact before new hires can start being added
+            <br>
+            <%= link_to image_tag("00000031.jpg") %>
+            </p>
+           
+        </div>
+        <div class="tab-pane" id="addnew">
+            <p style="font-size:18px">
+            -Click on "Add a new hire" button or "Add New" tab
+            <br>
+            <%= link_to image_tag("00000032.jpg") %>
+            <br>
+            -Fill in all required fields 
+            <br>
+            <%= link_to image_tag("00000033.jpg") %>
+            <br>
+            -Click "Add Hire" to complete adding hire
+            <br>
+            <%= link_to image_tag("00000034.jpg") %>
+            <br>
+            -The new hire is now added to the "All Hires" index
+            <br>
+            <%= link_to image_tag("00000035.jpg") %>
+            </p>
+            
+        </div>
+        <div class="tab-pane" id="todolist">
+            <p style="font-size:18px">
+            -Click on "Check new hire list" button or "All Hires" tab
+            <br>
+            <%= link_to image_tag("00000036.jpg") %>
+            <br>
+            -Click on the "to-do list" button on the row of the table that corresponds to the new hire of choice
+            <br>
+            <%= link_to image_tag("00000037.jpg") %>
+            <br>
+            -To send an email, click on the "Send Email" button on the row of the table that corresponds to the task that needs to be completed
+            <br>
+            <%= link_to image_tag("00000038.jpg") %>
+            <br>
+            -After the task is complete, click the "Done" button 
+            <br>
+            <%= link_to image_tag("00000039.jpg") %>
+            <br>
+            -If you wish to send another email that corresponds to an already completed task, click the "reset" button 
+            <br>
+            <%= link_to image_tag("00000040.jpg") %>
+            <br>
+            -When all tasks are complete, the "to-do list progress" will read "You have finished the new hire todo list!"
+            <br>
+            <%= link_to image_tag("00000041.jpg") %>
+            </p>
+            
+        </div>
+        <div class="tab-pane" id="edit">
+            <p style="font-size:18px">
+            -Click on "Check new hire list" button or "All Hires" tab
+            <br>
+            <%= link_to image_tag("00000036.jpg") %>
+            <br>
+            -Click on the "edit" button on the row that corresponds to the hire you would like to edit
+            <br>
+            <%= link_to image_tag("00000042.jpg") %>
+            <br>
+            -Change the information in the chosen fields
+            <br>
+            <%= link_to image_tag("00000043.jpg") %>
+            <br>
+            -Click the "Save" button to save the changes made
+            <br>
+            <%= link_to image_tag("00000044.jpg") %>
+            </p>
+            
+        </div>
+        <div class="tab-pane" id="delete">
+            <p style="font-size:18px">
+            -Click on "Check new hire list" button or "All Hires" tab
+            <br>
+            <%= link_to image_tag("00000036.jpg") %>
+            <br>
+            -Click on the "delete" button on the row that corresponds to the hire you would like to delete
+            <br>
+            <%= link_to image_tag("00000046.jpg") %>
+            <br>
+            -Click "OK" to successfully erase the new hire from the database
+            <br>
+            <%= link_to image_tag("00000047.jpg") %>
+            </p>
+            
+        </div>
+        <div class="tab-pane" id="search">
+            <p style="font-size:18px">
+            -Click on "Check new hire list" button or "All Hires" tab
+            <br>
+            <%= link_to image_tag("00000036.jpg") %>
+            <br>
+            -Click on the search bar and type in the name of the employee that you are searching for
+            <br>
+            <%= link_to image_tag("00000049.jpg") %>
+            <br>
+            -Click the "Search" button to search for the hire
+            <br>
+            <%= link_to image_tag("00000050.jpg") %>
+            <br>
+            -To return to the full list of hires, click the "Clear" button
+            <br>
+            <%= link_to image_tag("00000051.jpg") %>
+            </p>
+            
+        </div>
+    </div>
+</div>
 
-<a style="font-size:32px" name="edit"><strong>Editting a New Hire:</a>
-<br>
-<p style="font-size:18px">
-	  -Click on "Check new hire list" button or "All Hires" tab
-	  <br>
-  	<%= link_to image_tag("00000036.jpg") %>
-    <br>
-	  -Click on the "edit" button on the row that corresponds to the hire you would like to edit
-	  <br>
-  	<%= link_to image_tag("00000042.jpg") %>
-  	<br>
-	  -Change the information in the chosen fields
-	  <br>
-  	<%= link_to image_tag("00000043.jpg") %>
-  	<br>
-	  -Click the "Save" button to save the changes made
-	  <br>
-  	<%= link_to image_tag("00000044.jpg") %>
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
 
-<a style="font-size:32px" name="delete"><strong>Deleting a New Hire:</a>
-<br>
-<p style="font-size:18px">
-	  -Click on "Check new hire list" button or "All Hires" tab
-	  <br>
-  	<%= link_to image_tag("00000036.jpg") %>
-    <br>
-	  -Click on the "delete" button on the row that corresponds to the hire you would like to delete
-	  <br>
-  	<%= link_to image_tag("00000046.jpg") %>
-  	<br>
-	  -Click "OK" to successfully erase the new hire from the database
-	  <br>
-  	<%= link_to image_tag("00000047.jpg") %>
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+</script>    
+</div> <!-- container -->
 
-<a style="font-size:32px" name="search"><strong>Searching for a New Hire:</a>
-<br>
-<p style="font-size:18px">
-	  -Click on "Check new hire list" button or "All Hires" tab
-	  <br>
-  	<%= link_to image_tag("00000036.jpg") %>
-    <br>
-	  -Click on the search bar and type in the name of the employee that you are seraching for
-	  <br>
-  	<%= link_to image_tag("00000049.jpg") %>
-  	<br>
-	  -Click the "Search" button to search for the hire
-	  <br>
-  	<%= link_to image_tag("00000050.jpg") %>
-  	<br>
-	  -To return to the full list of hires, click the "Clear" button
-	  <br>
-  	<%= link_to image_tag("00000051.jpg") %>
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
 
+<script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
+
+</body>
+</html>
+<a href="#top">☝Back to top of the page</a>
+<br>
 Consult HR for questions or missing information.  
 
