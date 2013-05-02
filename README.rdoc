@@ -21,7 +21,7 @@ For more information on how to use it, please read the "help" page within this a
        $ bundle exec rake db:migrate
        $ bundle exec rake db:reset
 
-4. Start the server and you can start using it on your localhost:
+4. Start the server and you are good to use it on your localhost:
        $ rails s
 
 (last updated 05/02/2013)
