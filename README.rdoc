@@ -1,12 +1,12 @@
 == New Hire 3000 XP
 
-This is a new hire database for Oracle Social. Developed by co-ops Christopher Bissell and Jiayuan Chen.
+This is the new hire database for Oracle Social, developed by co-ops, Christopher Bissell and Jiayuan Chen.
 
-It helps managers tack the new hire information, create to-do list for them to setup everything they need in the begining of their work.
+This application helps managers save and find new hire information and track tasks that need to be accomplished for the new hire using a to-do list.
 
-For more information on how to use it, please read the "help" page within this app. 
+For more information on how to use the application, please read the "help" page within the app. 
 
-*We are continusly improving the functionality and power of this app, please check "Issues" tab on this github repo for information of ongoing improvements. We appreciate your contribution.
+*We are continusly improving the functionality and power of this app.  Please check the "Issues" tab on this github repo for information on ongoing improvements. We appreciate contribution.
 
 == Getting Started
 
