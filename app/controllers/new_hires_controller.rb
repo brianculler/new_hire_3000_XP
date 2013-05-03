@@ -42,7 +42,7 @@ class NewHiresController < ApplicationController
     end
     
     def index
-      @new_hires = NewHire.paginate(page: params[:page]) 
+      @new_hires = NewHire.search(params[:search]).paginate(:page => params[:page])
     end
     
     def destroy
@@ -176,5 +176,4 @@ class NewHiresController < ApplicationController
       end
       redirect_to @new_hire
     end
-
 end

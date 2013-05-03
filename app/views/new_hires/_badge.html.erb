@@ -32,14 +32,14 @@
 				<%= link_to "Email 2 sent", "#", class: "btn disabled btn-small" %>
 		    <% end %>
 			Disabled -->
-		
+					
+			<%= link_to "reset", "/badge/#{@new_hire.id}?badge=0", class: "btn btn-small btn-dange" %>
+			
 			<% if @new_hire.badge != 1 %>
 		    	<%= link_to "Done!", "/badge/#{@new_hire.id}?badge=1", class: "btn btn-success btn-small" %>
 		    <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled btn-small" %>
-			<% end %>	
-					
-			<%= link_to "reset", "/badge/#{@new_hire.id}?badge=0", class: "btn btn-small btn-dange" %>		
+			<% end %>		
 		</div>
 	</td>
 	

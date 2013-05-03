@@ -31,14 +31,16 @@
 				<%= link_to "Email 2 sent", "#", class: "btn disabled btn-small" %>
 		    <% end %>
 				-->
-		
+
+			<%= link_to "reset", "/seat/#{@new_hire.id}?seat=0", class: "btn btn-small" %>
+			
+			
 			<% if @new_hire.seat != 1 %>
 		    	<%= link_to "Done!", "/seat/#{@new_hire.id}?seat=1", class: "btn btn-success btn-small" %>
 		    <% else %>
 				<%= link_to "No more actions", "#", class: "btn disabled btn-small" %>
 			<% end %>
-			
-			<%= link_to "reset", "/seat/#{@new_hire.id}?seat=0", class: "btn btn-small" %>
+		
 			
 		</div>
 	</td>

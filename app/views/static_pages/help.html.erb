@@ -1,99 +1,155 @@
 <% provide(:title, 'Help') %>
 <h1>Help</h1>
-<a name="top"><p style = "align:left;font-size:30px;text-decoration:underline;"><strong>Table of Contents</p><a>
-<a href="#initial">→Initial setup</a>
 <br>
-<a href="#addnew">→Add New Hires</a>
-<br>
-<a href="#todolist">→To Do List and Emailing Contacts</a>
-<br>
-<a href="#edit">→Editting</a>
-<br>
-<a href="#delete">→Deleting</a>
-<br>
+<a href="#top" style="font-size:24px"><strong>What do you need help with?</a>
 <br>
 <br>
 
-<a style="font-size:24px" name="initial"><strong>Initial setup:</a>
-<br>
-<p>
-	-Go to the settings tab
-	<br>
-	<img src= "http://content.screencast.com/users/cbissell12345/folders/Jing/media/768d882e-0678-4b63-8d89-490df6d3ba3e/00000017.png"), class="img-rounded" %> 
-  	<br>
-  	-Click on the "add contact" button
-  	<br>
-  	<img src= "http://content.screencast.com/users/cbissell12345/folders/Jing/media/3fac7e06-72c6-4565-ac67-9ec68b88428d/00000018.png"), class="img-rounded" %>
-  	<br>
-  	-Put in the contacts for each responsibility.  The contacts put in will receive emails that remind them when certain tasks are due. 
-  	<br>
-  	<img src= "http://content.screencast.com/users/cbissell12345/folders/Jing/media/a23da8d5-e3a3-466d-8b92-bed767f55253/00000019.png"), class="img-rounded" %>
-  	<br>
-  	-All of the resonsibilities will need to have an assigned contact before new hires can start being added
-  	<br>
-  	<img src= "http://content.screencast.com/users/cbissell12345/folders/Jing/media/055a0c8b-94f1-410c-9872-b8931946dbad/00000020.png"), class="img-rounded" %>
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
 
-<a style="font-size:24px" name="addnew"><strong>Adding New Hires:</a>
-<br>
-<p>
-	-Click on "Add a new hire" button or "Add New" tab
-	<br>
-	-Fill in all required fields 
-	<br>
-	-Click "Add Hire" to complete adding hire
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
+<div class="container">
 
-<a style="font-size:24px" name="todolist"><strong>To Do List and Emailing Contacts:</a>
+<!-------->
+<div id="content">
+    <ul id="pills" class="nav nav-pills" data-pills="pills" align="center">
+        <li class="active"><a href="#initialSetup" data-toggle="pill">☞Initial Setup</a></li>
+        <li><a href="#addnew" data-toggle="pill">☞Adding a New Hire</a></li>
+        <li><a href="#todolist" data-toggle="pill">☞To-do List & Emailing</a></li>
+        <li><a href="#edit" data-toggle="pill">☞Editting</a></li>
+        <li><a href="#delete" data-toggle="pill">☞Deleting</a></li>
+        <li><a href="#search" data-toggle="pill">☞Searching</a></li>
+    </ul>
+    <div id="my-pill-content" class="pill-content">
+        <div class="pill-pane active" id="initialSetup">
+            <p style="font-size:18px">
+            -Go to the settings tab
+            <br>
+            <%= image_tag("00000026.jpg") %> 
+            <br>
+            -Click on the "add contact" button
+            <br>
+            <%= image_tag("00000027.jpg") %>
+            <br>
+            -Choose the responsibility that corresponds to the contact that you are adding.  The contact will recieve emails regarding the responsibility.
+            <br>
+            <%= image_tag("00000028.jpg") %>
+            <br>
+            -Put in the name and email address of the contact 
+            <br>
+            <%= image_tag("00000030.jpg") %>
+            <br>
+            -All of the resonsibilities will need to have an assigned contact before new hires can start being added
+            <br>
+            <%= image_tag("00000031.jpg") %>
+            </p>
+           
+        </div>
+        <div class="pill-pane" id="addnew">
+            <p style="font-size:18px">
+            -Click on "Add a new hire" button or "Add New" tab
+            <br>
+            <%= image_tag("00000032.jpg") %>
+            <br>
+            -Fill in all required fields 
+            <br>
+            <%= image_tag("00000033.jpg") %>
+            <br>
+            -Click "Add Hire" to complete adding hire
+            <br>
+            <%= image_tag("00000034.jpg") %>
+            <br>
+            -The new hire is now added to the "All Hires" index
+            <br>
+            <%= image_tag("00000035.jpg") %>
+            </p>
+            
+        </div>
+        <div class="pill-pane" id="todolist">
+            <p style="font-size:18px">
+            -Click on "Check new hire list" button or "All Hires" tab
+            <br>
+            <%= image_tag("00000036.jpg") %>
+            <br>
+            -Click on the "to-do list" button on the row of the table that corresponds to the new hire of choice
+            <br>
+            <%= image_tag("00000037.jpg") %>
+            <br>
+            -To send an email, click on the "Send Email" button on the row of the table that corresponds to the task that needs to be completed
+            <br>
+            <%= image_tag("00000038.jpg") %>
+            <br>
+            -After the task is complete, click the "Done" button 
+            <br>
+            <%= image_tag("00000039.jpg") %>
+            <br>
+            -If you wish to send another email that corresponds to an already completed task, click the "reset" button 
+            <br>
+            <%= image_tag("00000040.jpg") %>
+            <br>
+            -When all tasks are complete, the "to-do list progress" will read "You have finished the new hire todo list!"
+            <br>
+            <%= image_tag("00000041.jpg") %>
+            </p>
+            
+        </div>
+        <div class="pill-pane" id="edit">
+            <p style="font-size:18px">
+            -Click on "Check new hire list" button or "All Hires" tab
+            <br>
+            <%= image_tag("00000036.jpg") %>
+            <br>
+            -Click on the "edit" button on the row that corresponds to the hire you would like to edit
+            <br>
+            <%= image_tag("00000042.jpg") %>
+            <br>
+            -Change the information in the chosen fields
+            <br>
+            <%= image_tag("00000043.jpg") %>
+            <br>
+            -Click the "Save" button to save the changes made
+            <br>
+            <%= image_tag("00000044.jpg") %>
+            </p>
+            
+        </div>
+        <div class="pill-pane" id="delete">
+            <p style="font-size:18px">
+            -Click on "Check new hire list" button or "All Hires" tab
+            <br>
+            <%= image_tag("00000036.jpg") %>
+            <br>
+            -Click on the "delete" button on the row that corresponds to the hire you would like to delete
+            <br>
+            <%= image_tag("00000046.jpg") %>
+            <br>
+            -Click "OK" to successfully erase the new hire from the database
+            <br>
+            <%= image_tag("00000047.jpg") %>
+            </p>
+            
+        </div>
+        <div class="pill-pane" id="search">
+            <p style="font-size:18px">
+            -Click on "Check new hire list" button or "All Hires" tab
+            <br>
+            <%= image_tag("00000036.jpg") %>
+            <br>
+            -Click on the search bar and type in the name of the employee that you are searching for
+            <br>
+            <%= image_tag("00000049.jpg") %>
+            <br>
+            -Click the "Search" button to search for the hire
+            <br>
+            <%= image_tag("00000050.jpg") %>
+            <br>
+            -To return to the full list of hires, click the "Clear" button
+            <br>
+            <%= image_tag("00000051.jpg") %>
+            </p>
+            
+        </div>
+    </div>
+</div>
+<a href="#top">☝Back to top of the page</a>
 <br>
-<p>
-	-Click on "Check new hire list" button or "All Hires" tab
-	<br>
-	-Choose a hire by clicking on their name in the table
-	<br>
-	-To send an email, click on the "Send Email" button on the row of the table that corresponds to the task that needs to be completed
-	<br>
-	-After the task is complete, click the "Done" button 
-	<br>
-	-If you wish to send another email that corresponds to an already completed task, click the "reset" button 
-	<br>
-	-When all tasks are complete, the "to-do list progress" will read 100%
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
+Consult HR for questions or missing information.  
 
-<a style="font-size:24px" name="edit"><strong>Editting:</a>
-<br>
-<p>
-	-Click on "Check new hire list" button or "All Hires" tab
-	<br>
-	-Click on the "edit" button on the row that corresponds to the hire you would like to edit
-	<br>
-	-Change the information in the chosen fields
-	<br>
-	-Click the "Save" button to save the changes made
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
-
-<a style="font-size:24px" name="delete"><strong>Deleting:</a>
-<br>
-<p>
-	-Click on "Check new hire list" button or "All Hires" tab
-	<br>
-	-Click on the "delete" button on the row that corresponds to the hire you would like to delete
-	<br>
-	-Click "OK" to successfully erase the new hire from the database
-</p>
-<a href="#top">↑Return to Table of Contents</a>
-<br>
-<br>
-Consult HR for questions or missing information.
