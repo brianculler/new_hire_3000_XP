@@ -40,5 +40,6 @@
   		</div>
 	</div>
 <% else %>
+	<h1>You still need one more step...</h1>
 	<% flash[:error] = "Please first complete the necessary contacts information within \"Settings\"  (completed #{Contact.count} out 6)" %> 
 <% end %>
