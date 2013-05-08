@@ -32,5 +32,5 @@ For more information on how to use the application, please read the "help" page 
 * Try ruby / Rails for zombies on codeschool: http://www.codeschool.com/paths/ruby
 * Bootstrap css: http://twitter.github.io/bootstrap/
 * Codecademy for HTML/CSS tutorial: http://www.codecademy.com/tracks/web
-* Deploy on Heroku (email function): https://devcenter.heroku.com/articles/smtp
+* Deploy on Heroku (email function): https://blog.heroku.com/archives/2009/11/9/tech_sending_email_with_gmail
 * Git references: http://gitref.org/index.html
