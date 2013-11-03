@@ -40,7 +40,7 @@ NewHire3000Xp::Application.configure do
   :address              => "smtp.gmail.com",
   :port                 => 587,
   :user_name            => 'chenjiayuancz@gmail.com',
-  :password             => 'chenzongjituan',
+  :password             => 'chenzongjituan!',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
 end
